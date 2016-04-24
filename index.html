@@ -6,7 +6,7 @@
   </head>
   <body>
     <!-- Хэдер -->
-    <header>      
+    <header  class="header">      
       <div class="header-user">
         <div class="container">
           <a class="logo" href="/">Техномарт</a>
@@ -28,22 +28,22 @@
           <div class="contacts-login">
             <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <div class="contacts">
-              <p>+7 (812) 555-05-55</p>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <div>+7 (812) 555-05-55</div>
+              <div>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
             </div>
             <div class="unauthorized">
               <a href="#">Войти</a>
               <a href="#">Регистрация</a>
             </div>
             <div class="authorized display-none">
-              <p>
+              <div>
                 <a href="profile.html">Равшан Джамшутович</a>
                 <a href="log-out.html"></a>
-              </p>
-              <p>
+              </div>
+              <div>
                 <a href="#">Мои заказы</a>
                 <a href="#">Личный кабинет</a>
-              </p>
+              </div>
             </div>
           </div>
           <!-- Навигация по сайту -->
@@ -78,16 +78,16 @@
     <div class="promo">
       <div class="container">
         <div class="promo-block">
-          <div class="new">
-            <span>Материалы</span>
+          <div class="promo-card promo-material new">
+            <div>Материалы</div>
             <a href="#">На любой вкус</a>            
           </div>
-          <div>
-            <span>Инструмент</span>
+          <div class="promo-card promo-instrument">
+            <div>Инструмент</div>
             <a href="#">На все случаи</a> 
           </div>
-          <div>
-            <span>Техника</span>
+          <div class="promo-card promo-equipment">
+            <div>Техника</div>
             <a href="#">Для стройки</a> 
           </div>
           <!-- Слайдер -->
@@ -100,16 +100,18 @@
                 &gt;
               </a>
               <div class="slide">
-                <p>Дрели</p>
-                <p>Соседям на радость!</p>
+                <div class="slide-transparent-background">
+                  <div>Дрели</div>
+                  <div>Соседям на радость!</div>
+                </div>                
                 <a class="btn btn-red" href="catalog.html">Открыть каталог</a>
-                <img class="background" src="https://placehold.it/620x266" width="620" height="266" alt="Дрели">
               </div>
               <div class="slide">
-                <p>Перфораторы</p>
-                <p>Настоящие мужские игрушки</p>
+                <div class="slide-transparent-background">
+                  <div>Перфораторы</div>
+                  <div>Настоящие мужские игрушки</div>
+                </div>                
                 <a class="btn btn-red" href="catalog.html">Открыть каталог</a>
-                <img class="background" src="https://placehold.it/620x266" width="620" height="266" alt="Перфораторы">
               </div>
             </div>
             <div class="promo-slider-controls">
@@ -117,20 +119,20 @@
               <span class="slide-control"></span>
             </div>
           </div><!-- Конец слайдера -->
-          <div>
-            <span>Скидки 50%</span>
+          <div class="promo-card promo-discount">
+            <div>Скидки 50%</div>
             <a href="#">На 350 товаров</a> 
           </div>
-          <div>
-            <span>Доставка</span>
+          <div class="promo-card promo-delivery">
+            <div>Доставка</div>
             <a href="#">Бесплатно</a> 
           </div>
         </div>
         
         <!-- Популярные товары -->
-        <section>
-          <div>
-            <span>Популярные товары:</span>
+        <section class="popular-goods">
+          <div class="popular-goods-title">
+            <h1>Популярные товары:</h1>
             <a class="btn btn-red" href="#">Все популярные товары</a>
           </div>
           <div class="catalog-items">
@@ -178,9 +180,9 @@
         </section><!-- Конец популярных товаров -->
         
         <!-- Популярные производители -->
-        <section>
-          <div>
-            <span>Популярные производители:</span>
+        <section class="popular-brands">
+          <div class="popular-brands-title">
+            <h1>Популярные производители:</h1>
             <a class="btn btn-red" href="#">Все производители</a>
           </div>
           <div class="brands">
@@ -216,7 +218,7 @@
     <!-- Сервисы -->
     <section class="services">
       <div class="container">
-        <span class="services-title">Сервисы</span>
+        <h1>Сервисы</h1>
         <p class="services-description">
           Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
@@ -231,14 +233,14 @@
           </div>
           <div class="services-slides">
             <div class="services-slide">
-              <span class="services-slide-title">Доставка</span>
+              <div class="services-slide-title">Доставка</div>
               <p class="services-slide-description">
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!
               </p>              
             </div>
             <div class="services-slide">
-              <span class="services-slide-title">Гарантия</span>
+              <div class="services-slide-title">Гарантия</div>
               <p class="services-slide-description">
                 Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его возгоранием,<br>
@@ -247,7 +249,7 @@
               </p>              
             </div>
             <div class="services-slide">
-              <span class="services-slide-title">Кредит</span>
+              <div class="services-slide-title">Кредит</div>
               <p class="services-slide-description">
                 Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
@@ -279,30 +281,14 @@
           </ul>
           <a class="btn btn-red" href="#">Подробнее о компании</a>
         </section>        
-        <aside class="contacts">
-          <span>Контакты</span>
+        <section class="contacts">
+          <h1>Контакты</h1>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>          
           <a href="https://goo.gl/maps/gec1QWQCzeM2">
             <img src="https://placehold.it/300x157" width="300" height="157" alt="Карта">
           </a>          
           <a class="btn btn-red modal-window" href="#">Заблудились? Напишите нам!</a>
-          <div class="modal-content">
-            <div class="modal-content-close"></div>
-            <form action="#" method="post">
-              <div>
-                <label for="name">Ваше имя:</label>
-                <input type="text" name="username" id="name" placeholder="Представьтесь, пожалуйста">
-              </div>
-              <div>
-                <label for="email">Ваш email:</label>
-                <input type="text" name="email" id="email" placeholder="Для отправки ответа">
-              </div>
-              <label for="text">Ваш email:</label>
-              <textarea name="text" id="text" placeholder="В свободной форме" rows="5"></textarea>
-              <input class="btn-red" type="submit" value="Отправить">
-            </form>
-          </div>
-        </aside>
+        </section>
       </div>
     </div><!-- Конец о компании -->    
     
@@ -374,5 +360,23 @@
         </div>
       </div>      
     </footer><!-- Конец футера -->
+    
+    <!-- Модальное окно -->
+    <div class="modal-content">
+      <div class="modal-content-close"></div>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="username" id="name" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div>
+          <label for="email">Ваш email:</label>
+          <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+        </div>
+        <label for="text">Ваш email:</label>
+        <textarea name="text" id="text" placeholder="В свободной форме" rows="5"></textarea>
+        <input class="btn-red" type="submit" value="Отправить">
+      </form>
+    </div><!-- Конец модального окна -->
   </body>
 </html>

@@ -6,20 +6,24 @@
   </head>
   <body>
     <!-- Хэдер -->
-    <header>      
+    <header class="header">      
       <div class="header-user">
         <div class="container">
-          <a class="logo" href="/">Техномарт</a>
+          <a class="logo" href="/">Техномарт</a>          
           <form action="#" method="get">
-            <input type="search" name="search" id="search" value="Поиск">
-          </form>          
-          <a class="bookmarks" href="#">Закладки: 
-            <span>0</span>
-          </a>
-          <a class="cart" href="#">Корзина: 
-            <span>0</span>
-          </a>
-          <a class="order" href="#">Оформить заказ</a>
+            <div class="search">
+              <input type="search" name="search" id="search-field" value="Поиск:">
+            </div>            
+          </form>
+          <div class="bookmarks">
+            <a class="bookmarks-link" href="#">Закладки: 0</a>
+          </div>
+          <div class="cart">
+            <a class="cart-link" href="#">Корзина: 0</a>
+          </div>
+          <div class="order">
+            <a class="order-link" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
 
@@ -28,22 +32,22 @@
           <div class="contacts-login">
             <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <div class="contacts">
-              <p>+7 (812) 555-05-55</p>
-              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+              <div>+7 (812) 555-05-55</div>
+              <div>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
             </div>
             <div class="unauthorized display-none">
               <a href="#">Войти</a>
               <a href="#">Регистрация</a>
             </div>
             <div class="authorized">
-              <p>
+              <div>
                 <a href="profile.html">Равшан Джамшутович</a>
                 <a href="log-out.html"></a>
-              </p>
-              <p>
+              </div>
+              <div>
                 <a href="#">Мои заказы</a>
                 <a href="#">Личный кабинет</a>
-              </p>
+              </div>
             </div>
           </div>
           <!-- Навигация по сайту -->
@@ -82,7 +86,7 @@
         <!-- Хлебные крошки -->
         <ul class="breadcrumbs">
           <li>
-            <a class="home-icon" href="index.html"></a>
+            <a class="home-icon" href="index.html">Главная</a>
           </li>
           <li>
             <a href="#">Каталог</a>
@@ -137,19 +141,30 @@
                 <input type="radio" name="power-supply" value="mains-supply" id="mains-supply">
                 <label for="mains-supply">Сетевые</label>
               </fieldset>
-              <button class="btn btn-white" type="submit" value="Показать">Показать</button>
+              <button class="btn btn-white" type="submit">Показать</button>
             </form>
           </div><!-- Конец фильтра -->
           
           <!-- Каталог -->
           <div class="catalog">
             <div class="sorting">
-              <span>Сортировка:</span>
-              <a class="sort-active" href="#">По цене</a>
-              <a href="#">По типу</a>
-              <a href="#">По функционалу</a>
-              <a class="arrow-up" href="#"></a>
-              <a class="arrow-down" href="#"></a>
+              <ul><span>Сортировка:</span>
+                <li>
+                  <a class="sort-active" href="#">По цене</a>
+                </li>
+                <li>
+                  <a href="#">По типу</a>
+                </li>
+                <li>
+                  <a href="#">По функционалу</a>
+                </li>
+                <li>
+                  <a class="arrow-up" href="#">Вверх</a>
+                </li>
+                <li>
+                  <a class="arrow-down" href="#">Вниз</a>
+                </li>
+              </ul>
             </div>
             <!-- Товары -->
             <div class="catalog-items">
@@ -246,12 +261,11 @@
               <div class="modal-content">
                 <div class="modal-text-block">
                   <div class="modal-content-close"></div>
-                  <img src="https://placehold.it/70x66" width="77" height="66" alt="ОК!">
                   <span class="modal-text">Товар добавлен в корзину!</span>
                 </div>
                 <div class="modal-buttons">
                   <a class="btn btn-red" href="#">Оформить заказ</a>
-                  <button class="btn btn-white" type="button" value="Продолжить покупки">Продолжить покупки</button>
+                  <button class="btn btn-white" type="button">Продолжить покупки</button>
                 </div>            
               </div>
             </div><!-- Конец товаров -->    
