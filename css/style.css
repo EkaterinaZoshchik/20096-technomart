@@ -148,30 +148,39 @@ header{
 .main-navigation ul{
   margin: 0;
   padding: 0;
-  font-size: 0; 
 }
 .main-navigation li{
   display: inline-block; 
 }
 .main-navigation a{
   display: inline-block;
-  min-height: 43px;
+  width: 100px;
+  min-height: 43px;  
   padding-top: 18px; 
-  padding-left: 30px;
-  padding-right: 29px;   
+  padding-right: 30px;
   font-size: 17px;
+  text-align: right;
   background-color: #32425c;
 }
 .main-navigation li:nth-of-type(1) a{
-  padding-left: 52px;  
+  width: 104px;
 }
 .main-navigation li:nth-of-type(2) a{
-  padding-left: 35px; 
+  width: 100px;
 }
-.main-navigation li:nth-child(6) a{
-  padding-left: 33px;
+.main-navigation li:nth-of-type(3) a{
+  width: 81px;
 }
-.main-navigation li:nth-child(7) a{
-  padding-left: 34px;
-  padding-right: 54px;
+.main-navigation li:nth-of-type(4) a{
+  width: 83px;
+}
+.main-navigation li:nth-of-type(5) a{
+  width: 150px;
+}
+.main-navigation li:nth-of-type(6) a{
+  width: 92px;
+}
+.main-navigation li:nth-of-type(7) a{
+  width: 95px;
+  padding-right: 55px;
 }
