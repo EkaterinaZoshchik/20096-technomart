@@ -1,9 +1,10 @@
 body{
-  font-size: 13px;
+  font-size: 13px;  
   line-height: 24px;
   color: #000000;
   font-weight: normal;
   font-family: "PT Sans", "Arial", "sans-serif";
+  margin: 0;
 }
 h1{
   font-size: 30px;
@@ -15,4 +16,162 @@ h2{
   font-size: 30px;
   line-height: 24px;
   font-family: "Cuprum", "Arial", "sans-serif";
+}
+header{
+  font-family: "Cuprum", "Arial", "sans-serif";
+}
+
+.container{
+  width: 940px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*Хэдер пользователя*/
+.header-user{  
+  min-height: 42px;
+  font-size: 0;
+  background-color: #293449;
+}
+.header-user .logo{
+  display: inline-block;
+  width: 220px;
+  height: 42px;
+  vertical-align: middle;
+}
+.header-user form{
+  display: inline-block;
+}
+.header-user .search{
+  display: inline-block;
+  width: 270px;
+  vertical-align: middle;
+}
+.header-user .container > div{
+  display: inline-block;
+  width: 150px;
+  font-size: 17px;  
+  vertical-align: middle;
+}
+/*Основной хэдер*/
+.header-main{
+  background-color: #f1f5f7;
+  font-size: 0;
+}
+.header-main .container{
+  padding-top: 46px;
+  padding-bottom: 60px;
+}
+.contacts-login .display-none{
+  display: none;
+}
+.contacts-login > div{
+  display: inline-block;
+  font-size: 14px;  
+  vertical-align: top;
+}
+.contacts-login .description{
+  width: 200px;
+  margin-right: 20px;
+  padding-top: 3px; 
+  padding-left: 53px;
+  padding-right: 47px;     
+  line-height: 23px;
+}
+.contacts-login .contacts{  
+  margin-right: 50px;  
+}
+.contacts-login .contacts div:first-child{
+  width: 193px;
+  min-height: 31px;
+  padding-top: 7px;
+  padding-left: 71px;
+  border: 3px solid #ffffff;
+}
+.contacts-login .contacts div:last-child{
+  width: 270px;
+  padding-top: 4px;
+}
+.contacts-login .unauthorized{
+  font-size: 0px;
+}
+.unauthorized .login{
+  display: inline-block;
+  width: 121px;
+  min-height: 45px;
+  margin-left: 19px;
+  margin-right: 10px;
+  font-size: 21px;
+  background-color: #ffffff;
+}
+.unauthorized .register{
+  display: inline-block;
+  width: 150px;
+  min-height: 45px;
+  font-size: 21px;
+  background-color: #ffffff;
+}
+.authorized div{
+  font-size: 0;
+}
+.authorized a{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+.authorized .user{
+  width: 240px;
+  min-height: 45px;  
+  background-color: #ffffff;  
+}
+.authorized .logout{
+  width: 60px;
+  min-height: 45px;
+  background-color: #ffffff;
+}
+.authorized .my-orders{
+  padding-top: 7px;
+  padding-left: 19px;
+  padding-right: 20px; 
+  line-height: 18px;
+}
+.authorized .my-account{
+  padding-top: 7px;
+  padding-left: 11px;
+  padding-right: 13px;
+  line-height: 18px;
+}
+/*Главное меню*/
+.main-navigation{     
+  margin-top: 39px;  
+}
+.main-navigation ul{
+  margin: 0;
+  padding: 0;
+  font-size: 0; 
+}
+.main-navigation li{
+  display: inline-block; 
+}
+.main-navigation a{
+  display: inline-block;
+  min-height: 43px;
+  padding-top: 18px; 
+  padding-left: 30px;
+  padding-right: 29px;   
+  font-size: 17px;
+  background-color: #32425c;
+}
+.main-navigation li:nth-of-type(1) a{
+  padding-left: 52px;  
+}
+.main-navigation li:nth-of-type(2) a{
+  padding-left: 35px; 
+}
+.main-navigation li:nth-child(6) a{
+  padding-left: 33px;
+}
+.main-navigation li:nth-child(7) a{
+  padding-left: 34px;
+  padding-right: 54px;
 }
