@@ -19,6 +19,7 @@ h2{
   margin: 0;
 }
 header{
+  margin-bottom: 59px;
   font-family: "Cuprum", "Arial", "sans-serif";
 }
 .clearfix:after{
@@ -192,9 +193,6 @@ header{
 }
 
 /*Блок промо*/
-.promo-block{
-  margin-top: 59px;
-}
 .promo-card{
   float: left;
   width: 300px;
@@ -327,14 +325,12 @@ header{
   margin-top: 82px;
   min-height: 368px;  
 }
-
 .about-company{
   float: left;
   width: 519px;
 }
 .about-us .contacts{
-  float: left;
-  margin-left: 120px;
+  float: right;
 }
 .contacts p{
   display: block;
@@ -348,4 +344,134 @@ header{
 /*Футер*/
 footer{
   margin-top: 86px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+}
+/*Верхний футер*/
+.footer-contacts-menu{
+  padding-bottom: 50px;
+  font-size: 18px;
+  background-color: #32425c;  
+}
+.footer-contacts{
+  float: left;
+}
+.footer-contacts img{
+  display: block; 
+}
+.footer-contacts p{
+  width: 323px;
+  margin: 0;
+  margin-top: 28px;
+  margin-left: 4px;
+}
+.footer-menu{
+  float: right;
+  margin-top: 38px;
+}
+.footer-menu-bottom{
+  margin-top: 29px;
+}
+.footer-menu-top,
+.footer-menu-bottom{  
+  padding: 0;
+  font-size: 0;  
+  text-align: right;
+}
+.footer-menu-top li{
+  display: inline-block;
+  margin-right: 58px;  
+}
+.footer-menu-top li:nth-child(3){
+  margin-right: 62px;
+}
+.footer-menu-bottom li{
+  display: inline-block;
+  margin-right: 60px;
+}
+.footer-menu-top li:last-child,
+.footer-menu-bottom li:last-child{
+  margin-right: 0;
+}
+.footer-menu-top a,
+.footer-menu-bottom a{  
+  font-size: 18px;
+} 
+/*Нижний футер*/
+.footer-copyright-social{
+  padding-top: 36px;
+  padding-bottom: 35px;
+  background-color: #293449;
+  font-size: 16px;
+  line-height: 18px;
+}
+.footer-copyright,
+.footer-social,
+.footer-feedback{
+  float: left;
+  margin: 0;  
+}
+.footer-copyright{
+  width: 228px;
+  margin-right: 161px
+}
+.footer-social{
+  width: 132px;
+  margin-right: 120px;
+}
+.footer-feedback{
+  width: 135px;
+  margin-right: 53px;
+}
+.footer-designed{
+  float: right;
+  width: 96px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+/*Модальное окно "Напишите нам"*/
+.modal-content{
+  display: none;
+  width: 620px;
+  min-height: 430px;
+}
+.modal-content-fields{
+  padding-top: 49px;
+  padding-bottom: 37px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #ffffff;
+}
+.modal-content-fields input{
+  width: 196px;
+  padding: 10px;
+}
+.modal-name{
+  float: left;
+  width: 220px;
+  min-height: 64px;
+}
+.modal-email{
+  float: right;
+  width: 220px;
+  min-height: 64px;
+}
+.modal-text{
+  clear: both;  
+  padding-top: 20px;
+}
+.modal-text textarea{  
+  width: 438px;
+  min-height: 110px;
+  padding: 10px;
+}
+.modal-content-button{
+  padding-top: 37px;
+  padding-bottom: 37px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #f1f1f1;
+}
+.modal-content-button .btn{
+  width: 460px;
 }
