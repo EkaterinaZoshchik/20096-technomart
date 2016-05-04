@@ -662,12 +662,31 @@ footer{
   padding: 10px;
 }
 .modal-content-button{
+  width: 460px;
   padding-top: 37px;
   padding-bottom: 37px;
   padding-left: 80px;
   padding-right: 80px;
   background-color: #f1f1f1;
 }
-.modal-content-button .btn{
-  width: 460px;
+.modal-content-button input[type=submit]{
+  width: 100%;
+}
+/*Окно о добавлении товара в корзину*/
+.modal-success{
+  min-height: 178px;
+}
+.modal-text-block{
+  padding-top: 54px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  padding-right: 126px;
+  background-color: #ffffff;
+}
+.modal-success .btn{
+  display: inline-block;
+  width: 220px;
+}
+.modal-content-button a{
+  margin-right: 16px;
 }
