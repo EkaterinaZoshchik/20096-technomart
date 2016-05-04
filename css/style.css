@@ -1,26 +1,33 @@
 body{
+  margin: 0;
   font-size: 13px;  
   line-height: 24px;
   color: #000000;
   font-weight: normal;
-  font-family: "PT Sans", "Arial", "sans-serif";
-  margin: 0;
+  font-family: "PT Sans", "Arial", "sans-serif";  
 }
-h1{
+h1{  
+  margin: 0;
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
   font-family: "Cuprum", "Arial", "sans-serif";
 }
 h2{
+  margin: 0;
   font-size: 30px;
   line-height: 24px;
-  font-family: "Cuprum", "Arial", "sans-serif";
-  margin: 0;
+  font-family: "Cuprum", "Arial", "sans-serif";  
 }
 header{
-  margin-bottom: 59px;
   font-family: "Cuprum", "Arial", "sans-serif";
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
 }
 .clearfix:after{
   content: "";
@@ -152,10 +159,6 @@ header{
 .main-navigation{     
   margin-top: 39px;  
 }
-.main-navigation ul{
-  margin: 0;
-  padding: 0;
-}
 .main-navigation li{
   display: inline-block; 
 }
@@ -193,6 +196,9 @@ header{
 }
 
 /*Блок промо*/
+.promo{
+  margin-top: 59px;
+}
 .promo-card{
   float: left;
   width: 300px;
@@ -236,8 +242,8 @@ header{
 .popular-goods-title,
 .popular-brands-title{
   min-height: 89px;
-  background-color: #f7f3ec;
   margin-bottom: 20px;
+  background-color: #f7f3ec;  
 }
 .popular-goods-title h1,
 .popular-brands-title h1{
@@ -258,7 +264,7 @@ header{
   margin-right: 20px;
   border: 1px solid #e5e5e5;
 }
-.catalog-item:nth-child(4n){
+.popular-goods .catalog-item:nth-child(4n){
   margin-right: 0;
 }
 
@@ -290,8 +296,10 @@ header{
   padding-top: 68px;
   padding-bottom: 101px;
 }
-.services .container > p{
+.services-description{
   width: 400px;
+  margin: 0;
+  margin-top: 30px;
 }
 .services-slider-control{
   float: left;
@@ -321,13 +329,20 @@ header{
 }/*Удалить*/
 
 /*О компании*/
-.about-us{
+.about-us{  
+  min-height: 368px;
   margin-top: 82px;
-  min-height: 368px;  
+  margin-bottom: 86px;
 }
 .about-company{
   float: left;
   width: 519px;
+}
+.about-company p{
+  margin-top: 23px;
+}
+.about-company p:nth-of-type(1){
+  margin-top: 30px;
 }
 .about-us .contacts{
   float: right;
@@ -335,15 +350,197 @@ header{
 .contacts p{
   display: block;
   width: 179px;
+  margin-top: 29px;
+  margin-bottom: 30px;
 }
 .about-us .btn{
   display: block;
   margin-top: 40px;
 }
 
+/*Хлебные крошки*/
+.breadcrumbs{
+  min-height: 9px;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs li{
+  display: inline-block;
+  margin-right: 40px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/*Секция перфораторы*/
+.perforators-content h1{
+  min-height: 88px;
+  margin-bottom: 20px;
+  background-color: #f2f6f8;  
+}
+/*Фильтр*/
+.filter{
+  float: left;
+  width: 220px;
+}
+.filter > span{
+  display: block;
+  width: auto;
+  min-height: 38px;
+  background-color: #f7f3ec;
+}
+.filter .price-title{
+  min-height: 41px;
+  padding-top: 14px;
+}
+.range-controls{
+  width: 220px;
+  min-height: 80px;
+  margin-bottom: 9px;
+  background-color: #f7f3ec; 
+}
+.price-conrols{
+  margin-bottom: 25px;
+}
+.price-conrols input:first-child{
+  float: left;
+  width: 91px;
+  min-height: 34px;
+  padding: 0;
+}
+.price-conrols input:last-child{
+  float: right;
+  width: 91px;
+  min-height: 34px;
+  padding: 0;
+}
+.price-conrols span{
+  float: left;  
+  width: 30px;
+  min-height: 27px;  
+  padding-top: 7px;
+  text-align: center;
+}
+.brands,
+.power-supply{
+  margin: 0;
+  padding: 0;  
+  border: 0;
+}
+.brands legend,
+.power-supply legend{
+  width: 220px;
+  min-height: 40px;
+  padding: 0;
+  padding-top: 19px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 17px;
+}
+.brands{
+  min-height: 242px;
+  margin-bottom: 21px;
+}
+.brands .checkbox{
+  min-height: 23px;
+  margin-bottom: 17px;
+  line-height: 20px;
+}
+.brands .checkbox:nth-child(2){
+  margin-bottom: 16px;
+}
+.brands .checkbox:last-child{
+  margin-bottom: 0;
+}
+.power-supply{
+  min-height: 125px;
+  margin-bottom: 75px;
+}
+.power-supply legend{
+  min-height: 39px;
+  padding-top: 20px;
+}
+.power-supply .radiobutton{
+ min-height: 25px;
+ margin-bottom: 16px;
+ line-height: 20px;
+}
+.power-supply .radiobutton:last-child{
+  margin-bottom: 0;
+}
+.filter button{
+  width: 136px;
+  min-height: 38px;
+}
+
+/*Каталог*/
+.catalog{
+  float: right;
+  width: 700px;
+}
+.catalog .sorting{
+  width: auto;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+  padding-right: 16px;
+  line-height: 18px;
+  background-color: #f7f3ec;
+}
+.sorting ul{
+  display: inline-block;
+}
+.sorting li{
+  display: inline-block;
+}
+.sorting span{
+  margin-right: 136px;
+  text-transform: uppercase;
+}
+.sorting li:nth-child(1){
+  margin-right: 68px;
+}
+.sorting li:nth-child(2){
+  margin-right: 61px;
+}
+.catalog .catalog-item{
+  margin-bottom: 20px;
+}
+.catalog .catalog-item:nth-child(3n){
+  margin-right: 0;
+}
+.catalog .pagination{
+  min-height: 6px;
+  margin-bottom: 60px;
+  padding-top: 32px;
+  clear: both;
+}
+.catalog .pagination li{
+  display: inline-block;
+}
+.catalog .pagination a{
+  display: block;
+  width: 36px;
+  min-height: 36px;
+  margin-right: 7px;
+  border: 1px solid #e5e5e5;
+}
+.catalog .pagination .next{
+  width: 138px;
+}
+
+/*Абзац про перфораторы*/
+.about-perforators{
+  min-height: 118px;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: #f2f6f8;
+}
+.about-perforators p{
+  margin-top: 29px;
+}
+
 /*Футер*/
 footer{
-  margin-top: 86px;
   font-family: "Cuprum", "Arial", "sans-serif";
 }
 /*Верхний футер*/
@@ -360,7 +557,6 @@ footer{
 }
 .footer-contacts p{
   width: 323px;
-  margin: 0;
   margin-top: 28px;
   margin-left: 4px;
 }

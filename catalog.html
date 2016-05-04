@@ -102,7 +102,7 @@
           </li>
         </ul><!-- Конец хлебных крошек -->        
         <h1>Перфораторы</h1>
-        <div class="filter-catalog-content">
+        <div class="filter-catalog-content clearfix">
           <!-- Фильтр -->
           <div class="filter">
             <span>Фильтр:</span>            
@@ -117,7 +117,7 @@
                   </div>
                 </div>
                 <div class="price-conrols">
-                  <div>
+                  <div class="clearfix">
                     <input class="min-price" type="text" value="0" id="min-price">
                     <span>-</span>
                     <input class="max-price" type="text" value="30000" id="max-price">
@@ -126,23 +126,37 @@
               </div>
               <fieldset class="brands">
                 <legend>Производители</legend>
-                <input type="checkbox" name="bosch" id="bosch" checked>
-                <label for="bosch">bosch</label>
-                <input type="checkbox" name="interskol" id="interskol">
-                <label for="interskol">интерскол</label>
-                <input type="checkbox" name="makita" id="makita" checked>
-                <label for="makita">makita</label>
-                <input type="checkbox" name="dewalt" id="dewalt">
-                <label for="dewalt">dewalt</label>
-                <input type="checkbox" name="hitachi" id="hitachi">
-                <label for="hitachi">hitachi</label>
+                <div class="checkbox">
+                  <input type="checkbox" name="bosch" id="bosch" checked>
+                  <label for="bosch">bosch</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="interskol" id="interskol">
+                  <label for="interskol">интерскол</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="makita" id="makita" checked>
+                  <label for="makita">makita</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="dewalt" id="dewalt">
+                  <label for="dewalt">dewalt</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="hitachi" id="hitachi">
+                  <label for="hitachi">hitachi</label>
+                </div>
               </fieldset>
               <fieldset class="power-supply">
                 <legend>Питание</legend>
-                <input type="radio" name="power-supply" value="battery-supply" id="battery-supply" checked>
-                <label for="battery-supply">Аккумуляторные</label>
-                <input type="radio" name="power-supply" value="mains-supply" id="mains-supply">
-                <label for="mains-supply">Сетевые</label>
+                <div class="radiobutton">
+                  <input type="radio" name="power-supply" value="battery-supply" id="battery-supply" checked>
+                  <label for="battery-supply">Аккумуляторные</label>
+                </div>
+                <div class="radiobutton">
+                  <input type="radio" name="power-supply" value="mains-supply" id="mains-supply">
+                  <label for="mains-supply">Сетевые</label>
+                </div>
               </fieldset>
               <button class="btn btn-white" type="submit">Показать</button>
             </form>
@@ -285,7 +299,7 @@
                 <a class="btn btn-white" href="#">3</a>
               </li>
               <li>
-                <a class="btn btn-white" href="#">Следующая</a>
+                <a class="btn btn-white next" href="#">Следующая</a>
               </li>
             </ul>
           </div><!-- Конец каталога -->
