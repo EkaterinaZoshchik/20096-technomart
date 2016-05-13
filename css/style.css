@@ -42,6 +42,9 @@ ul{
 p{
   margin: 0;
 }
+a:not([href]){
+  cursor: default;
+}
 .clearfix:after{
   content: "";
   clear: both;
@@ -174,10 +177,181 @@ input[type="radio"]:checked + label:hover::before{
   background-position: -182px -68px;
 }
 
+/********** Общие стили для модальных окон **********/
+.modal-content{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 620px; 
+  margin-left: -310px;
+  box-shadow: 0 25px 60px 0 rgba(18, 25, 35, 0.7);
+  border-top: 7px solid #ee3643;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  line-height: 18px;
+}
+.modal-content-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  outline: 0;
+  font-size: 0;
+  background-color: transparent;  
+  cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 23px;
+  height: 5px;
+  background-color: #ee3643;
+  border-radius: 1px;
+}
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+.modal-container{
+  width: 460px;
+  padding: 37px 80px;
+}
+.modal-container.top{
+  background-color: #ffffff;
+}
+.modal-container.bottom{
+  background-color: #f1f1f1;
+}
+.modal-content input[type="text"],
+.modal-content textarea{
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: "PT Sans", "Arial", "sans-serif";
+}
+label + input[type="text"],
+label + textarea{
+  margin-top: 8px;
+}
+.modal-content input[type="submit"]{
+  border: 0;
+  box-sizing: content-box;
+}
+.modal-content .btn{
+  font-size: 14px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+}
+
+/********** Модальное окно "Напишите нам" **********/
+.modal-content.modal-write-us{ 
+  margin-top: -215px;   
+}
+.modal-write-us .top{  
+  font-size: 18px;
+}
+.modal-write-us input[type="text"]{
+  width: 190px;
+  padding: 8px 13px;
+}
+.modal-name,
+.modal-email{
+  width: 220px;
+  min-height: 64px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
+.modal-name{
+  float: left;
+}
+.modal-email{
+  float: right;  
+}
+.modal-text{
+  clear: both;  
+}
+.modal-text textarea{  
+  width: 438px;
+  padding: 10px;
+}
+.modal-write-us input[type=submit]{
+  width: 100%;
+  min-height: 38px;
+  padding: 0;  
+}
+
+/********** Модальное окно "Добавление товара в корзину" **********/
+.modal-content.modal-cart{
+  margin-top: -141px;
+}
+.modal-cart .top{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 30px;
+}
+.modal-cart .modal-text{
+  position: relative;
+  padding-left: 99px;
+}
+.modal-cart .top::before{
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 80px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: #63a63e;
+}
+.modal-cart .modal-text::before{
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 17px;
+  width: 20px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  border-top-right-radius: 0;
+  transform: rotate(45deg);
+}
+.modal-cart .modal-text::after{
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 30px;
+  width: 25px;
+  height: 7px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+  transform: rotate(-45deg);
+}
+.modal-cart .btn{  
+  width: 220px;
+  border: 0;
+  box-sizing: content-box;
+}
+.modal-cart .btn-red{
+  float: left;
+}
+.modal-cart .btn-white{
+  float: right;
+  min-height: 39px;
+  padding: 0
+}
+
 /********** Хэдер пользователя **********/
 .header-user{  
   min-height: 42px;
   font-size: 0;
+  color: #ffffff;
   background-color: #293449;
 }
 .header-user .logo{
@@ -185,6 +359,10 @@ input[type="radio"]:checked + label:hover::before{
   width: 220px;
   height: 42px;
   vertical-align: middle;
+}
+.logo img{
+  width: 220px;
+  height: 47px;
 }
 .logo img:nth-child(2),
 .logo img:nth-child(3){
@@ -527,6 +705,7 @@ input[type="radio"]:checked + label:hover::before{
   margin-top: 23px;
 }
 .nav-list{
+  color: #ffffff;
   background-color: #32425c;
   list-style: none;
 }
@@ -547,10 +726,10 @@ input[type="radio"]:checked + label:hover::before{
 .main-navigation a:last-child{
   padding-right: 34px;
 }
-.main-navigation a:hover{
+.main-navigation a[href]:hover{
   background-color: #293449;
 }
-.main-navigation a:active{
+.main-navigation a[href]:active{
   background-color: #1d2739;
   color: #a8abaf;
 }
@@ -874,11 +1053,21 @@ input[type="radio"]:checked + label:hover::before{
   display: none;
 }
 .services-slider-control{
+  position: relative;
   float: left;
   width: 240px;
   margin-top: 68px;
   margin-bottom: 102px;
   margin-right: 80px;  
+}
+.services-slider-control::after{
+  content: "";
+  position: absolute;
+  top: -44px;
+  left: 230px;
+  width: 10px;
+  height: 272px;
+  background-image: url("/img/services-shadow.png");
 }
 .services-slider-control label{
   display: block;
@@ -911,7 +1100,7 @@ input[type="radio"]:checked + label:hover::before{
   float: left;
   width: 620px;
   min-height: 280px;
-  margin-top: 73px;
+  margin-top: 70px;
 }
 .services-slide-title{
   margin-bottom: 31px;
@@ -940,18 +1129,23 @@ input[type="radio"]:checked + label:hover::before{
 }
 .services-slide-delivery{
   min-height: 280px;
-  background: url("/img/services_delivery.png") no-repeat 151px 19px;
+  padding-top: 3px;
+  background: url("/img/services_delivery.png") no-repeat 151px 22px;
 }
 .services-slide-guarantee{
+  width: 629px;
   min-height: 280px;
-  background: url("/img/services_guarantee.png") no-repeat 233px 0;
+  padding-top: 3px;
+  background: url("/img/services_guarantee.png") no-repeat 239px 0;
 }
 .services-slide-credit{
+  width: 646px;
   min-height: 280px;
-  background: url("/img/services_credit.png") no-repeat 155px 0;
+  padding-top: 3px;
+  background: url("/img/services_credit.png") no-repeat 181px -3px;
 }
-.services-slide-guarantee,
-.services-slide-credit{
+.services-slide-delivery,
+.services-slide-guarantee{
   display: none;
 }
 
@@ -1403,14 +1597,17 @@ input[type="radio"]:checked + label:hover::before{
 .footer-contacts-menu{
   padding-bottom: 50px;
   font-size: 18px;
+  color: #ffffff;
   background-color: #32425c;  
 }
 .footer-contacts{
   float: left;
   width: 323px;
 }
-.footer-contacts img{
-  display: block; 
+.footer-logo img{
+  display: block;
+  width: 220px;
+  height: 68px;
 }
 .footer-contacts p{
   width: 323px;
@@ -1474,10 +1671,11 @@ input[type="radio"]:checked + label:hover::before{
 /********** Нижний футер **********/
 .footer-copyright-social{
   padding-top: 36px;
-  padding-bottom: 35px;
-  background-color: #293449;
+  padding-bottom: 35px;  
   font-size: 16px;
   line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
 }
 .footer-copyright,
 .footer-social,
@@ -1550,174 +1748,4 @@ input[type="radio"]:checked + label:hover::before{
 .footer-designed a:active{
   text-decoration: none;
   color: #ee3643;
-}
-
-/********** Общие стили для модальных окон **********/
-.modal-content{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  display: none;
-  width: 620px; 
-  margin-left: -310px;
-  box-shadow: 0 25px 60px 0 rgba(18, 25, 35, 0.7);
-  border-top: 7px solid #ee3643;
-  font-family: "Cuprum", "Arial", "sans-serif";
-  line-height: 18px;
-}
-.modal-content-close {
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  width: 22px;
-  height: 22px;
-  border: 0;
-  outline: 0;
-  font-size: 0;
-  background-color: transparent;  
-  cursor: pointer;
-}
-.modal-content-close::before,
-.modal-content-close::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 23px;
-  height: 5px;
-  background-color: #ee3643;
-  border-radius: 1px;
-}
-.modal-content-close::before {
-  transform: rotate(45deg);
-}
-.modal-content-close::after {
-  transform: rotate(-45deg);
-}
-.modal-container{
-  width: 460px;
-  padding: 37px 80px;
-}
-.modal-container.top{
-  background-color: #ffffff;
-}
-.modal-container.bottom{
-  background-color: #f1f1f1;
-}
-.modal-content input[type="text"],
-.modal-content textarea{
-  border: 2px solid #d7dcde;
-  border-radius: 3px;
-  font-size: 13px;
-  font-family: "PT Sans", "Arial", "sans-serif";
-}
-label + input[type="text"],
-label + textarea{
-  margin-top: 8px;
-}
-.modal-content input[type="submit"]{
-  border: 0;
-  box-sizing: content-box;
-}
-.modal-content .btn{
-  font-size: 14px;
-  font-family: "Cuprum", "Arial", "sans-serif";
-}
-
-/********** Модальное окно "Напишите нам" **********/
-.modal-content.modal-write-us{ 
-  margin-top: -215px;   
-}
-.modal-write-us .top{  
-  font-size: 18px;
-}
-.modal-write-us input[type="text"]{
-  width: 190px;
-  padding: 8px 13px;
-}
-.modal-name,
-.modal-email{
-  width: 220px;
-  min-height: 64px;
-  margin-top: 8px;
-  margin-bottom: 22px;
-}
-.modal-name{
-  float: left;
-}
-.modal-email{
-  float: right;  
-}
-.modal-text{
-  clear: both;  
-}
-.modal-text textarea{  
-  width: 438px;
-  padding: 10px;
-}
-.modal-write-us input[type=submit]{
-  width: 100%;
-  min-height: 38px;
-  padding: 0;  
-}
-
-/********** Модальное окно "Добавление товара в корзину" **********/
-.modal-content.modal-cart{
-  margin-top: -141px;
-}
-.modal-cart .top{
-  padding-top: 70px;
-  padding-bottom: 70px;
-  font-size: 30px;
-}
-.modal-cart .modal-text{
-  position: relative;
-  padding-left: 99px;
-}
-.modal-cart .top::before{
-  content: "";
-  position: absolute;
-  top: 45px;
-  left: 80px;
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background-color: #63a63e;
-}
-.modal-cart .modal-text::before{
-  content: "";
-  position: absolute;
-  top: 19px;
-  left: 17px;
-  width: 20px;
-  height: 7px;
-  background-color: #ffffff;
-  border-radius: 1px;
-  border-top-right-radius: 0;
-  transform: rotate(45deg);
-}
-.modal-cart .modal-text::after{
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 30px;
-  width: 25px;
-  height: 7px;
-  background-color: #ffffff;
-  border-bottom-right-radius: 1px;
-  border-top-right-radius: 1px;
-  transform: rotate(-45deg);
-}
-.modal-cart .btn{  
-  width: 220px;
-  border: 0;
-  box-sizing: content-box;
-}
-.modal-cart .btn-red{
-  float: left;
-}
-.modal-cart .btn-white{
-  float: right;
-  min-height: 39px;
-  padding: 0
 }
