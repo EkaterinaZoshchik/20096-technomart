@@ -388,7 +388,7 @@ label + textarea{
 /**********Модальное окно "Карта" **********/
 .modal-map.show{  
   display: block;
-  animation: scale 0.1s;
+  animation: scale 0.4s;
 }
 .modal-content.modal-map{
   width: 940px;
@@ -498,6 +498,9 @@ label + textarea{
   width: 132px;
   padding-left: 18px;
 }
+.full-bookmarks-cart{
+  background-color: #ee3643;
+}
 .order-link{
   width: 150px;
   background-color: #63a63e;
@@ -506,7 +509,7 @@ label + textarea{
 .cart-link:active{
   opacity: 0.6;
 }
-.bookmarks::before{
+.bookmarks-link::before{
   content: "";
   position: absolute;  
   top: 12px;
@@ -516,13 +519,13 @@ label + textarea{
   background: url("/img/sprite.png") no-repeat -62px -15px;
   opacity: 0.3;
 }
-.bookmarks:hover::before{
+.bookmarks-link:hover::before{
   opacity: 1;
 }
-.bookmarks:active::before{
+.bookmarks-link:active::before{
   opacity: 0.5;
 }
-.cart::before{
+.cart-link::before{
   content: "";
   position: absolute;  
   top: 12px;
@@ -532,10 +535,10 @@ label + textarea{
   background: url("/img/sprite.png") no-repeat -15px -15px;
   opacity: 0.3;
 }
-.cart:hover::before{
+.cart-link:hover::before{
   opacity: 1;
 }
-.cart:active::before{
+.cart-link:active::before{
   opacity: 0.5;
 }
 .order-link:hover{
@@ -1857,7 +1860,7 @@ label + textarea{
   background: #212a3a url("/img/sprite.png") no-repeat;
   border-radius: 50%;
 }
-.footer-social .btn-social:nth-child{
+.footer-social .btn-social:last-child{
   margin-right: 0;
 }
 .footer-social .btn-vk{
