@@ -166,6 +166,43 @@ input[type="radio"]:checked + label:hover::before{
   background-position: -182px -68px;
 }
 
+/***** Анимация "Прыжок слева" для окна "Напишите нам" *****/
+@keyframes bounce{
+  from{
+    transform: translateX(-2000px);
+  }
+  70%{
+    transform: translateX(20px);
+  }
+  90%{
+    transform: translateX(-5px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+/*** Анимация "Тряска" для окна "Напишите нам" ***/
+@keyframes shake{
+  from, to{
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90%{
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80%{
+    transform: translateX(10px);
+  }
+}
+/*** Анимация "Масштаб" для окна "Добавление товара в корзину ***/
+@keyframes scale{
+  from{
+    transform: scale(0.7);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
 /********** Общие стили для модальных окон **********/
 .modal-content{
   position: fixed;
@@ -180,7 +217,7 @@ input[type="radio"]:checked + label:hover::before{
   line-height: 18px;
   z-index: 1000;
 }
-.modal-content-close {
+.modal-content-close{
   position: absolute;
   top: 9px;
   right: 9px;
@@ -193,7 +230,7 @@ input[type="radio"]:checked + label:hover::before{
   cursor: pointer;
 }
 .modal-content-close::before,
-.modal-content-close::after {
+.modal-content-close::after{
   content: "";
   position: absolute;
   top: 8px;
@@ -206,7 +243,7 @@ input[type="radio"]:checked + label:hover::before{
 .modal-content-close::before {
   transform: rotate(45deg);
 }
-.modal-content-close::after {
+.modal-content-close::after{
   transform: rotate(-45deg);
 }
 .modal-container{
@@ -242,6 +279,10 @@ label + textarea{
 /********** Модальное окно "Напишите нам" **********/
 .modal-write-us.show{
   display: block;
+  animation: bounce 0.6s;
+}
+.modal-write-us.modal-error{
+  animation: shake 0.6s;
 }
 .modal-content.modal-write-us{ 
   margin-top: -215px;   
@@ -279,9 +320,10 @@ label + textarea{
   padding: 0;  
 }
 
-/********** Модальное окно "Добавление товара в корзину" **********/
+/******* Модальное окно "Добавление товара в корзину" *******/
 .modal-cart.show{
   display: block;
+  animation: scale 0.1s;
 }
 .modal-content.modal-cart{
   margin-top: -141px;
