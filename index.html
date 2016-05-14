@@ -294,7 +294,7 @@
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>          
-          <a href="https://goo.gl/maps/gec1QWQCzeM2">
+          <a class="js-open-map" href="https://goo.gl/maps/gec1QWQCzeM2">
             <img src="img/map_mini.png" width="300" height="158" alt="Карта">
           </a>          
           <a class="btn btn-red btn-write-us" href="#">Заблудились? Напишите нам!</a>
@@ -413,6 +413,15 @@
       </div>            
     </div><!-- Конец модального окна "Добавление товара в корзину"-->
     
-    <script src="js/animation.js"></script>
+    <!-- Модальное окно "Карта" -->
+    <div class="modal-content modal-map">
+      <button class="modal-content-close" type="button" title="Закрыть">
+        Закрыть
+      </button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412409!2d30.320894616222446!3d59.938796869047735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1463261378033" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div><!-- Конец модального окна "Карта"-->
+    
+    <script src="js/popup.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

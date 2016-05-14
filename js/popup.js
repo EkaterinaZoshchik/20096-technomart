@@ -40,7 +40,7 @@ if (btnOpenWriteUs && popupWriteUs && btnCloseWriteUs) {
   });
 }
 
-if (btnOpenCart && btnCloseCart && popupCart) {
+if (btnOpenCart && popupCart && btnCloseCart) {
   for (var i=0; i<btnOpenCart.length; i++){
     btnOpenCart[i].addEventListener("click", function (event) {
     event.preventDefault();
@@ -52,8 +52,10 @@ if (btnOpenCart && btnCloseCart && popupCart) {
     popupCart.classList.remove("show");
   });
   window.addEventListener("keydown", function (event) {
-    if (event.keyCode === 27){
-      popupCart.classList.remove("show");
+    if (event.keyCode === 27) {
+      if (popupCart.classList.contains("show")) {
+        popupCart.classList.remove("show");       
+      }      
     }
   });
 }
