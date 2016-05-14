@@ -240,6 +240,9 @@ label + textarea{
 }
 
 /********** Модальное окно "Напишите нам" **********/
+.modal-write-us.show{
+  display: block;
+}
 .modal-content.modal-write-us{ 
   margin-top: -215px;   
 }
@@ -277,6 +280,9 @@ label + textarea{
 }
 
 /********** Модальное окно "Добавление товара в корзину" **********/
+.modal-cart.show{
+  display: block;
+}
 .modal-content.modal-cart{
   margin-top: -141px;
 }

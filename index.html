@@ -297,7 +297,7 @@
           <a href="https://goo.gl/maps/gec1QWQCzeM2">
             <img src="img/map_mini.png" width="300" height="158" alt="Карта">
           </a>          
-          <a class="btn btn-red modal-window" href="#">Заблудились? Напишите нам!</a>
+          <a class="btn btn-red btn-write-us" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div><!-- Конец о компании -->    
@@ -398,5 +398,73 @@
         </div>        
       </form>      
     </div><!-- Конец модального окна "Напишите нам"-->
+    
+    <!-- Модальное окно "Добавление товара в корзину" -->
+    <div class="modal-content modal-cart">
+      <button class="modal-content-close" type="button" title="Закрыть">
+        Закрыть
+      </button> 
+      <div class="modal-container top">        
+        <span class="modal-text">Товар добавлен в корзину!</span>
+      </div>
+      <div class="modal-container bottom clearfix">
+        <a class="btn btn-red" href="#">Оформить заказ</a>
+        <button class="btn btn-white" type="button">Продолжить покупки</button>
+      </div>            
+    </div><!-- Конец модального окна "Добавление товара в корзину"-->
+    
+    <script>
+      var btnOpenWriteUs = document.querySelector(".btn-write-us"),
+          popupWriteUs = document.querySelector(".modal-write-us"),
+          btnCloseWriteUs = document.querySelector(".modal-write-us .modal-content-close"),
+          
+          form = popupWriteUs.querySelector("form"),
+          fieldName = popupWriteUs.querySelector("#name"),
+          fieldEmail = popupWriteUs.querySelector("#email"),
+          fieldText = popupWriteUs.querySelector("#text"),
+          
+          btnOpenCart = document.querySelectorAll(".btn-buy"),
+          popupCart= document.querySelector(".modal-cart"),
+          btnCloseCart = document.querySelector(".modal-cart .modal-content-close");
+      
+      btnOpenWriteUs.addEventListener("click", function(event){
+        event.preventDefault();
+        popupWriteUs.classList.add("show");
+        fieldName.focus();        
+      });
+      btnCloseWriteUs.addEventListener("click", function(event){
+        event.preventDefault();
+        popupWriteUs.classList.remove("show");
+      });
+      window.addEventListener("keydown", function(event){
+        if(event.keyCode === 27){
+          if(popupWriteUs.classList.contains("show")){
+            popupWriteUs.classList.remove("show");
+          }          
+        }
+      });      
+      form.addEventListener("submit", function(event){
+        if(!fieldName.value || !fieldEmail.value || !fieldText.value){
+          event.preventDefault();
+          console.log("Не все поля заполнены");
+        }
+      });
+      
+      for(var i=0; i<btnOpenCart.length; i++){
+        btnOpenCart[i].addEventListener("click", function(event){
+        event.preventDefault();
+        popupCart.classList.add("show");
+      });
+      }    
+      btnCloseCart.addEventListener("click", function(event){
+        event.preventDefault();
+        popupCart.classList.remove("show");
+      });
+      window.addEventListener("keydown", function(event){
+        if(event.keyCode === 27){
+          popupCart.classList.remove("show");
+        }
+      });
+    </script>
   </body>
 </html>
