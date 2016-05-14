@@ -1,14 +1,3 @@
-.sprite-icon-left_white {
-    width: 22px;
-    height: 40px;
-    background-position: -202px -123px;
-}
-.sprite-icon-right_white {
-    width: 22px;
-    height: 40px;
-    background-position: -254px -68px;
-}
-
 body{
   min-width: 960px;
   font-size: 13px;  
@@ -189,6 +178,7 @@ input[type="radio"]:checked + label:hover::before{
   border-top: 7px solid #ee3643;
   font-family: "Cuprum", "Arial", "sans-serif";
   line-height: 18px;
+  z-index: 1000;
 }
 .modal-content-close {
   position: absolute;
@@ -324,9 +314,9 @@ label + textarea{
 .modal-cart .modal-text::after{
   content: "";
   position: absolute;
-  top: 13px;
-  left: 30px;
-  width: 25px;
+  top: 15px;
+  left: 25px;
+  width: 32px;
   height: 7px;
   background-color: #ffffff;
   border-bottom-right-radius: 1px;
@@ -739,9 +729,11 @@ label + textarea{
   margin-top: 59px;
 }
 .promo-card{
-  width: 300px;
-  min-height: 123px;
+  width: 185px;
+  height: 123px;
   margin-bottom: 20px;
+  padding-right: 115px;
+  overflow: hidden;
 }
 .top-promo-block .promo-card{
   float: left;
@@ -792,18 +784,114 @@ label + textarea{
 .promo-delivery{
   background: #f6b22d url("/img/delivery_promo.png") no-repeat 191px 32px;
 }
-.promo-slider-wrapper{
+
+/********** Промо-слайдер **********/
+.promo-slider{
+  position: relative;
   float: left;
   width: 620px;
-  min-height: 266px;
+  height: 266px;
   margin-right: 20px;
 }
-.slide_drills{
-  display: none;
+.promo-slider input[type="radio"] {
+    position: absolute;
+    opacity: 0;
 }
-.promo-slider .slide{
+.promo-slider-controls{
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  width: 100px;
+  height: 10px;  
+  margin-left: -50px;
+  text-align: center;
+  z-index: 1000;
+}
+.promo-slider-controls label{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  vertical-align: top;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+#promo-slide-1:checked ~ .promo-slider-controls label[for="promo-slide-1"],
+#promo-slide-2:checked ~ .promo-slider-controls label[for="promo-slide-2"]{
+  background-color: #ee3643;
+}
+.promo-slider label[class="promo-prev-toggle"],
+.promo-slider label[class="promo-next-toggle"]{
+  position: absolute;
+  top: 114px;
+  width: 22px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.promo-slider label[class="promo-prev-toggle"]{
+  left: 25px;
+}
+.promo-slider label[class="promo-next-toggle"]{
+  right: 20px;
+}
+.promo-slider .promo-prev-toggle::before,
+.promo-slider .promo-prev-toggle::after,
+.promo-slider .promo-next-toggle::before,
+.promo-slider .promo-next-toggle::after{
+  content: "";
+  position: absolute;  
+  width: 3px;
+  height: 28px;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+.promo-slider .promo-prev-toggle::before,
+.promo-slider .promo-next-toggle::after{
+  transform: rotate(45deg);
+}
+.promo-slider .promo-prev-toggle::after,
+.promo-slider .promo-next-toggle::before{
+  transform: rotate(-45deg);
+}
+.promo-slider .promo-prev-toggle::after,
+.promo-slider .promo-next-toggle::after{
+  top: 15px;
+}
+.promo-slider .promo-prev-toggle::before,
+.promo-slider .promo-next-toggle::before{
+  top: -3px;
+}
+.promo-slider .promo-prev-toggle::before,
+.promo-slider .promo-prev-toggle::after,
+.promo-slider .promo-next-toggle::before,
+.promo-slider .promo-next-toggle::after{
+  left: 10px;
+}
+.promo-slides .slide{
   position: relative;
+  width: 620px;
   height: 266px;
+  overflow: hidden;
+}
+.slide div{
+  padding-left: 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", "sans-serif";
+  color: #ffffff;
+}
+.slide .slide-title{
+  padding-top: 26px;
+  margin-bottom: 4px;
+  font-size: 36px;
+  line-height: 30px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .slide .btn{
   position: absolute;
@@ -817,32 +905,22 @@ label + textarea{
 .slide .btn:active{
   background-color: #ba2732;
 }
-.slide div{
-  padding-left: 25px;
-  font-size: 18px;
-  line-height: 24px;
-  font-family: "PT Sans", "Arial", "sans-serif";
-  color: #ffffff;
-}
-.slide div:first-child{
-  padding-top: 26px;
-  margin-bottom: 4px;
-  font-size: 36px;
-  line-height: 30px;
-  font-family: "Cuprum", "Arial", "sans-serif";
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.slide_perforators{  
+.slide:nth-child(1){  
   background: #84776f url("/img/perforators_slider.jpg") no-repeat;
 }
-.slide_drills{  
+.slide:nth-child(2){  
   background: #84776f url("/img/drills_slider.jpg") no-repeat;
 }
-.promo-slider > a{
+.slide{
   display: none;
 }
+#promo-slide-1:checked ~ .promo-slides .slide:nth-child(1){
+  display: block;
+}
+#promo-slide-2:checked ~ .promo-slides .slide:nth-child(2){
+  display: block;
+}
+/********** Конец промо-слайдера **********/
 
 /********** Популярные товары **********/
 .popular-goods{
@@ -1049,8 +1127,9 @@ label + textarea{
   margin: 0;
   margin-top: 29px;
 }
-.services-slider input{
-  display: none;
+.services-slider input[type="radio"]{
+  position: absolute;
+  opacity: 0;
 }
 .services-slider-control{
   position: relative;
@@ -1059,15 +1138,6 @@ label + textarea{
   margin-top: 68px;
   margin-bottom: 102px;
   margin-right: 80px;  
-}
-.services-slider-control::after{
-  content: "";
-  position: absolute;
-  top: -44px;
-  left: 230px;
-  width: 10px;
-  height: 272px;
-  background-image: url("/img/services-shadow.png");
 }
 .services-slider-control label{
   display: block;
@@ -1082,19 +1152,27 @@ label + textarea{
   font-family: "Cuprum", "Arial", "sans-serif";
   background-color: #32425c;
   color: #ffffff;
+  cursor: pointer;
 }
 .services-slider-control label:hover{
   background-color: #293449;
 }
-.services-slider-control .active{
+#btn-delivery:checked ~ .services-slider-control label[for="btn-delivery"],
+#btn-guarantee:checked ~ .services-slider-control label[for="btn-guarantee"],
+#btn-credit:checked ~ .services-slider-control label[for="btn-credit"]{
   border-color: #ffffff;
   color: #32425c;
   background-color: #ffffff;
+  cursor: default;
 }
-.services-slider-control .active:hover{
-  border-color: #ffffff;
-  color: #32425c;
-  background-color: #ffffff;
+.services-slider-control::after{
+  content: "";
+  position: absolute;
+  top: -44px;
+  left: 230px;
+  width: 10px;
+  height: 272px;
+  background-image: url("/img/services-shadow.png");
 }
 .services-slides{
   float: left;
@@ -1102,7 +1180,7 @@ label + textarea{
   min-height: 280px;
   margin-top: 70px;
 }
-.services-slide-title{
+.services-slide .title{
   margin-bottom: 31px;
   font-size: 36px;
   line-height: 24px;
@@ -1110,43 +1188,51 @@ label + textarea{
   font-family: "Cuprum", "Arial", "sans-serif";
   text-transform: uppercase;
 }
-.services-slide-description{
+.services-slide .description{
   font-size: 13px;
   line-height: 24px;
 }
-.services-slide-delivery p{
+.delivery .description{
   width: 275px;  
 }
-.services-slide-guarantee p{
+.guarantee .description{
   width: 379px;  
 }
-.services-slide-credit p{
+.credit .description{
   width: 279px; 
 }
 .services-slides .btn{
   width: 195px;
   margin-top: 26px;
 }
-.services-slide-delivery{
+.services-slide.delivery{
   min-height: 280px;
   padding-top: 3px;
   background: url("/img/services_delivery.png") no-repeat 151px 22px;
 }
-.services-slide-guarantee{
+.services-slide.guarantee{
   width: 629px;
   min-height: 280px;
   padding-top: 3px;
   background: url("/img/services_guarantee.png") no-repeat 239px 0;
 }
-.services-slide-credit{
+.services-slide.credit{
   width: 646px;
   min-height: 280px;
   padding-top: 3px;
   background: url("/img/services_credit.png") no-repeat 181px -3px;
 }
-.services-slide-delivery,
-.services-slide-guarantee{
+.services-slide{
   display: none;
+}
+#btn-delivery:checked ~ .services-slides .services-slide:nth-child(1){
+  display: block;
+}
+#btn-guarantee:checked ~ .services-slides .services-slide:nth-child(2){
+  display: block;
+}
+#btn-credit:checked ~ .services-slides .services-slide:nth-child(3){
+  display: block;
 }
 
 /********** О компании **********/
