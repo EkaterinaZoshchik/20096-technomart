@@ -31,6 +31,11 @@ ul{
 p{
   margin: 0;
 }
+input[type="text"],
+textarea{  
+  outline: none;
+  resize: none;
+}
 a:not([href]){
   cursor: default;
 }
@@ -62,12 +67,18 @@ a:not([href]){
 }
 .btn.disabled,
 .btn:disabled{
-  cursor: default;
   opacity: 0.5;
+  cursor: default;  
 }
 .btn-red{
   background-color: #ee3643;  
   color: #ffffff;
+}
+.btn-red:hover{
+  background-color: #ca2c37;
+}
+.btn-red:active{
+  background-color: #ba2732;
 }
 .btn-white{
   min-height: 27px;
@@ -77,6 +88,12 @@ a:not([href]){
   font-size: 13px;
   color: #000000;
   font-family: "PT Sans", "Arial", "sans-serif";
+}
+.btn-white:hover{
+  border: 1px solid #bdc6ca;
+}
+.btn-white:active{
+  border: 1px solid #ee3643;
 }
 .btn-black{
   width: 135px;
@@ -117,7 +134,7 @@ input[type="checkbox"] + label::before{
   left: 0;
   width: 27px;
   height: 23px;
-  background: url("/img/sprite.png") no-repeat -106px -15px;
+  background: url("../img/sprite.png") no-repeat -106px -15px;
 }
 input[type="checkbox"] + label:hover::before{
   background-position: -159px -15px;
@@ -146,7 +163,7 @@ input[type="radio"] + label::before{
   left: 0;
   width: 25px;
   height: 25px;
-  background: url("/img/sprite.png") no-repeat -72px -68px;
+  background: url("../img/sprite.png") no-repeat -72px -68px;
 }
 input[type="radio"] + label:hover::before{
   background-position: -15px -123px;
@@ -193,7 +210,7 @@ input[type="radio"]:checked + label:hover::before{
     transform: translateX(10px);
   }
 }
-/*** Анимация "Масштаб" для окна "Добавление товара в корзину ***/
+/*** Анимация "Масштаб" ***/
 @keyframes scale{
   from{
     transform: scale(0.7);
@@ -449,7 +466,7 @@ label + textarea{
   left: 17px;
   width: 17px;
   height: 17px;
-  background: url("/img/sprite.png") no-repeat -15px -242px;
+  background: url("../img/sprite.png") no-repeat -15px -242px;
   opacity: 0.3;
 }
 .search-field{
@@ -472,7 +489,7 @@ label + textarea{
 .search-field:focus{
   outline: 0;
   color: #000000;  
-  background: #ffffff url("/img/icon-search_red.png") no-repeat 17px 12px;
+  background: #ffffff url("../img/icon-search_red.png") no-repeat 17px 12px;
 }
 .bookmarks,
 .cart,
@@ -516,7 +533,7 @@ label + textarea{
   left: 17px;
   width: 14px;
   height: 16px;
-  background: url("/img/sprite.png") no-repeat -62px -15px;
+  background: url("../img/sprite.png") no-repeat -62px -15px;
   opacity: 0.3;
 }
 .bookmarks-link:hover::before{
@@ -532,7 +549,7 @@ label + textarea{
   left: 17px;
   width: 17px;
   height: 16px;
-  background: url("/img/sprite.png") no-repeat -15px -15px;
+  background: url("../img/sprite.png") no-repeat -15px -15px;
   opacity: 0.3;
 }
 .cart-link:hover::before{
@@ -600,7 +617,7 @@ label + textarea{
   left: 12px;
   width: 19px;
   height: 19px;
-  background: url("/img/sprite.png") no-repeat -217px -193px;
+  background: url("../img/sprite.png") no-repeat -217px -193px;
 }
 .header-contacts-login .contacts-address{
   width: 260px;
@@ -636,7 +653,7 @@ label + textarea{
   left: 15px;
   width: 20px;
   height: 17px;
-  background: url("/img/sprite.png") no-repeat -65px -193px;
+  background: url("../img/sprite.png") no-repeat -65px -193px;
 }
 .unauthorized .login:hover::before{
   background-position: -15px -193px;
@@ -687,7 +704,7 @@ label + textarea{
   left: 14px;
   width: 20px;
   height: 18px;
-  background: url("/img/sprite.png") no-repeat -112px -242px;
+  background: url("../img/sprite.png") no-repeat -112px -242px;
 }
 .authorized .user:hover::before{
   background-position: -62px -242px;
@@ -711,7 +728,7 @@ label + textarea{
   right: 10px;
   width: 21px;
   height: 17px;
-  background: url("/img/sprite.png") no-repeat -166px -193px;
+  background: url("../img/sprite.png") no-repeat -166px -193px;
 }
 .authorized .logout:hover::after{
   background-position: -115px -193px;
@@ -837,19 +854,19 @@ label + textarea{
   background-color: rgba(0,0,0,0.3);
 }
 .promo-material{
-  background: #f6b22d url("/img/material_promo.png") no-repeat 213px 31px;
+  background: #f6b22d url("../img/material_promo.png") no-repeat 213px 31px;
 }
 .promo-instrument{
-  background: #4aafde url("/img/instrument_promo.png") no-repeat 197px 33px;
+  background: #4aafde url("../img/instrument_promo.png") no-repeat 197px 33px;
 }
 .promo-equipment{
-  background: #cc79d1 url("/img/equipment_promo.png") no-repeat 191px 31px;
+  background: #cc79d1 url("../img/equipment_promo.png") no-repeat 191px 31px;
 }
 .promo-discount{
-  background: #85d179 url("/img/discount_promo.png") no-repeat 196px 26px;
+  background: #85d179 url("../img/discount_promo.png") no-repeat 196px 26px;
 }
 .promo-delivery{
-  background: #f6b22d url("/img/delivery_promo.png") no-repeat 191px 32px;
+  background: #f6b22d url("../img/delivery_promo.png") no-repeat 191px 32px;
 }
 
 /********** Промо-слайдер **********/
@@ -966,17 +983,11 @@ label + textarea{
   left: 25px;
   width: 195px;
 }
-.slide .btn:hover{
-  background-color: #ca2c37;
-}
-.slide .btn:active{
-  background-color: #ba2732;
-}
 .slide:nth-child(1){  
-  background: #84776f url("/img/perforators_slider.jpg") no-repeat;
+  background: #84776f url("../img/perforators_slider.jpg") no-repeat;
 }
 .slide:nth-child(2){  
-  background: #84776f url("/img/drills_slider.jpg") no-repeat;
+  background: #84776f url("../img/drills_slider.jpg") no-repeat;
 }
 .slide{
   display: none;
@@ -987,7 +998,6 @@ label + textarea{
 #promo-slide-2:checked ~ .promo-slides .slide:nth-child(2){
   display: block;
 }
-/********** Конец промо-слайдера **********/
 
 /********** Популярные товары **********/
 .popular-goods{
@@ -1030,13 +1040,15 @@ label + textarea{
   border: 1px solid #e5e5e5;
   vertical-align: top;
   font-size: 17px;
-  line-height: 18px;  
+  line-height: 18px;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 .popular-goods .catalog-item:nth-child(4n){
   margin-right: 0;
 }
 .catalog-item:hover{
-  border: 1px solid #ffffff;
+  border: 1px solid transparent;
   box-shadow: 0 9px 30px 2px #a9adb5;
 }
 .catalog-item:hover .buy{
@@ -1058,7 +1070,7 @@ label + textarea{
   left: 13px;
   width: 17px;
   height: 16px;
-  background: url("/img/sprite.png") no-repeat -15px -15px;
+  background: url("../img/sprite.png") no-repeat -15px -15px;
   opacity: 0.3;
 }
 .catalog-item .btn-buy:hover::before{
@@ -1104,23 +1116,26 @@ label + textarea{
 }
 .catalog-item .btn-red{
   position: relative;
-  width: 122px;
-  margin-left: 40px;
+  display: inline-block;
+  margin-left: 42px;
+  padding-left: 34px;
+  padding-right: 37px;
+  font-size: 17px;
+  font-weight: bold;
   font-family: "PT Sans", "Arial", "sans-serif";
-  border-radius: 0;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  vertical-align: middle;
+  border-radius: 3px;  
 }
 .catalog-item .btn-red::after{
   content: "";
   position: absolute;
   top: 0;
-  right: -19px;
+  right: 0;
   width: 0;
   height: 0;
-  border-left: 19px solid #ee3643;
-  border-top: 19px solid transparent;
-  border-bottom: 19px solid transparent;
+  border-left: 19px solid transparent;
+  border-top: 19px solid #ffffff;
+  border-bottom: 19px solid #ffffff;    
 }
 .catalog-item.new-flag::before{
   content: "";
@@ -1169,7 +1184,7 @@ label + textarea{
   margin-top: 30px;
 }
 .brands a:hover{
-  border: 1px solid #ffffff;
+  border: 1px solid transparent;
   box-shadow: 0 9px 30px 2px #a9adb5;
 }
 .brands a:active{
@@ -1239,7 +1254,7 @@ label + textarea{
   left: 230px;
   width: 10px;
   height: 272px;
-  background-image: url("/img/services-shadow.png");
+  background-image: url("../img/services-shadow.png");
 }
 .services-slides{
   float: left;
@@ -1275,19 +1290,19 @@ label + textarea{
 .services-slide.delivery{
   min-height: 280px;
   padding-top: 3px;
-  background: url("/img/services_delivery.png") no-repeat 151px 22px;
+  background: url("../img/services_delivery.png") no-repeat 151px 22px;
 }
 .services-slide.guarantee{
   width: 629px;
   min-height: 280px;
   padding-top: 3px;
-  background: url("/img/services_guarantee.png") no-repeat 239px 0;
+  background: url("../img/services_guarantee.png") no-repeat 239px 0;
 }
 .services-slide.credit{
   width: 646px;
   min-height: 280px;
   padding-top: 3px;
-  background: url("/img/services_credit.png") no-repeat 181px -3px;
+  background: url("../img/services_credit.png") no-repeat 181px -3px;
 }
 .services-slide{
   display: none;
@@ -1391,7 +1406,7 @@ label + textarea{
   right: 17px;
   width: 8px;
   height: 12px; 
-  background: url("/img/sprite.png") no-repeat -269px -15px;
+  background: url("../img/sprite.png") no-repeat -269px -15px;
 }
 .breadcrumbs li:first-child::after{
   top: 4px;
@@ -1422,7 +1437,7 @@ label + textarea{
   left: 0;
   width: 15px;
   height: 12px;  
-  background: url("/img/sprite.png") no-repeat -110px -123px;
+  background: url("../img/sprite.png") no-repeat -110px -123px;
 }
 
 /********** Секция перфораторы **********/
@@ -1463,9 +1478,9 @@ label + textarea{
 .range-controls{
   position: relative;
   width: 180px;
-  height: 41px;
+  height: 42px;
   margin-bottom: 9px;
-  padding-top: 39px;
+  padding-top: 38px;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #f7f3ec; 
@@ -1477,13 +1492,13 @@ label + textarea{
   background-color: #d7dcde;
 }
 .range-controls .bar {
-  width: 80%;
+  width: 85%;
   height: 2px;
   background: #00ca74;
 }
 .range-controls .toggle {
   position: absolute;
-  top: 30px;
+  top: 29px;
   left: 0px;
   width: 4px;
   height: 4px;
@@ -1497,7 +1512,7 @@ label + textarea{
   left: 20px;
 }
 .range-controls .max-toggle {
-  left: 158px;
+  left: 160px;
 }
 .price-conrols{
   position: relative;
@@ -1594,6 +1609,7 @@ label + textarea{
   padding-top: 1px;
   box-sizing: content-box;
   cursor: pointer;
+  outline: none;
 }
 
 /********** Каталог **********/
@@ -1725,12 +1741,6 @@ label + textarea{
 .catalog-pagination .btn-next{
   width: 138px;
 }
-.catalog-pagination .btn-white:hover{
-  border: 1px solid #bdc6ca;
-}
-.catalog-pagination .btn-white:active{
-  border: 1px solid #ee3643;
-}
 
 /********** Абзац про перфораторы **********/
 .about-perforators{
@@ -1840,11 +1850,11 @@ label + textarea{
 }
 .footer-copyright{
   width: 233px;
-  margin-right: 139px;
+  margin-right: 136px;
   margin-left: 2px;
 }
 .footer-social{
-  width: 167px;
+  width: 170px;
   margin-right: 100px;
   font-size: 0;
   text-align: center;
@@ -1857,7 +1867,7 @@ label + textarea{
   vertical-align: top;
   font-size: 0;
   text-decoration: none;
-  background: #212a3a url("/img/sprite.png") no-repeat;
+  background: #212a3a url("../img/sprite.png") no-repeat;
   border-radius: 50%;
 }
 .footer-social .btn-social:last-child{

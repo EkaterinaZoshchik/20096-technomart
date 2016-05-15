@@ -3,8 +3,12 @@ var btnOpenWriteUs = document.querySelector(".btn-write-us"),
     btnCloseWriteUs = document.querySelector(".modal-write-us .modal-content-close"),
     btnOpenCart = document.querySelectorAll(".btn-buy"),
     popupCart = document.querySelector(".modal-cart"),
-    btnCloseCart = document.querySelector(".modal-cart .modal-content-close");
+    btnCloseCart = document.querySelector(".modal-cart .modal-content-close"),
+    mapOpen = document.querySelector(".js-open-map"),
+    mapPopup = document.querySelector(".modal-map"),
+    mapClose = document.querySelector(".modal-map .modal-content-close");
 
+/********** Модальное окно "Напишите нам" **********/
 if (btnOpenWriteUs && popupWriteUs && btnCloseWriteUs) {
   form = popupWriteUs.querySelector("form");
   fieldName = popupWriteUs.querySelector("#name");
@@ -40,6 +44,7 @@ if (btnOpenWriteUs && popupWriteUs && btnCloseWriteUs) {
   });
 }
 
+/******* Модальное окно "Добавление товара в корзину" *******/
 if (btnOpenCart && popupCart && btnCloseCart) {
   for (var i=0; i<btnOpenCart.length; i++){
     btnOpenCart[i].addEventListener("click", function (event) {
@@ -55,6 +60,26 @@ if (btnOpenCart && popupCart && btnCloseCart) {
     if (event.keyCode === 27) {
       if (popupCart.classList.contains("show")) {
         popupCart.classList.remove("show");       
+      }      
+    }
+  });
+}
+
+/********** Модальное окно "Карта" **********/      
+if (mapOpen && mapPopup && mapClose) {        
+  mapOpen.addEventListener("click", function (event) {
+  event.preventDefault();
+  mapPopup.classList.add("show");
+  });
+
+  mapClose.addEventListener("click", function (event) {
+    event.preventDefault();
+    mapPopup.classList.remove("show");
+  });
+  window.addEventListener("keydown", function (event) {
+    if (event.keyCode === 27) {
+      if (mapPopup.classList.contains("show")) {
+        mapPopup.classList.remove("show");       
       }      
     }
   });
