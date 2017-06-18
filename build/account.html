@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Техномарт Личный кабинет</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700,400italic&subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page-wrapper">
+    <!-- page-header -->
+    <header class="page-header">
+      <div class="page-header__user">
+        <div class="container">
+          <a class="logo" href="index.html">
+            <img src="img/logo-header.png" width="220" height="47" alt="Техномарт">
+            <img src="img/logo-header_hover.png" width="220" height="47" alt="Техномарт">
+            <img src="img/logo-header_active.png" width="220" height="47" alt="Техномарт">
+          </a>
+          <form class="page-header__form" action="#" method="get">
+            <div class="page-header__search">
+              <input class="page-header__search-field" type="search" name="search" id="search-field" placeholder="Поиск:">
+            </div>
+          </form>
+          <div class="page-header__user-item">
+            <a class="page-header__user-link  page-header__user-link--bookmarks" href="#">Закладки: 0</a>
+          </div>
+          <div class="page-header__user-item">
+            <a class="page-header__user-link  page-header__user-link--cart" href="cart.html">Корзина:</a>
+          </div>
+          <div class="page-header__user-item">
+            <a class="page-header__user-link  page-header__user-link--order" href="place-order.html">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header__main">
+        <div class="container  page-header__container">
+          <div class="page-header__description  page-header__main-item">Интернет-магазин электроинструментов</div>
+          <div class="page-header__contacts  page-header__main-item">
+            <div class="page-header__phone">+7 (812) 555-05-55</div>
+            <div class="page-header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+          </div>
+          <div class="page-header__unauthorized  page-header__main-item  page-header__display-none">
+            <a class="page-header__unauthorized-link  page-header__unauthorized-link--login" href="#">Войти</a>
+            <a class="page-header__unauthorized-link  page-header__unauthorized-link--register" href="register.html">Регистрация</a>
+          </div>
+          <div class="page-header__authorized  page-header__main-item  page-header__display-none">
+            <div class="page-header__authorized-item">
+              <a class="page-header__authorized-link  page-header__authorized-link--user" href="#">Привет,</a>
+              <a class="page-header__authorized-link  page-header__authorized-link--logout" href="#" title="Выйти"></a>
+            </div>
+            <div class="page-header__authorized-item">
+              <a class="page-header__authorized-link  page-header__authorized-link--my-orders" href="orders.html">Мои заказы</a>
+              <a class="page-header__authorized-link  page-header__authorized-link--my-account">Личный кабинет</a>
+            </div>
+          </div>
+          <!-- main-nav -->
+          <div class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Компания</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link">Каталог</a>
+
+                <ul class="subnav">
+                  <template id="subnav-item-template">
+                    <li class="subnav__item">
+                      <a class="subnav__link"></a>
+                    </li>
+                  </template>
+                </ul>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="news.html">Новости</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Спецпредложения</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div><!-- main-nav END -->
+        </div>
+      </div>
+    </header><!-- page-header END -->
+
+    <!-- page--account -->
+    <section class="page">
+      <div class="container">
+        <h1 class="page__title  page__title--margin-top">Личный кабинет</h1>
+        <div class="account">
+          <form class="form" action="index.html" method="post">
+            <div class="form__controls-wrapper">
+              <div class="form__controls">
+                <div class="form__text-field-block">
+                  <label class="form__label" for="last-name">Фамилия:</label>
+                  <input class="form__text-field" type="text" id="account__last-name" name="last-name" placeholder="Ваша фамилия" required>
+                </div>
+                <div class="form__text-field-block">
+                  <label class="form__label" for="first-name">Имя:</label>
+                  <input class="form__text-field" type="text" id="account__first-name" name="first-name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__text-field-block">
+                  <label class="form__label" for="middle-name">Отчество:</label>
+                  <input class="form__text-field" type="text" id="account__middle-name" name="middle-name" placeholder="Ваше отчество" required>
+                </div>
+              </div>
+              <div class="form__controls">
+                <div class="form__text-field-block">
+                  <label class="form__label" for="place-order__tel">Тел:</label>
+                  <input class="form__text-field" type="text" id="account__tel" name="tel" placeholder="Ваш телефон" required>
+                </div>
+                <div class="form__text-field-block">
+                  <label class="form__label" for="email">Email:</label>
+                  <input class="form__text-field" type="text" name="email" id="account__email" placeholder="Ваш email" required readonly>
+                </div>
+                <div class="form__text-field-block">
+                  <label class="form__label" for="password">Пароль:</label>
+                  <input class="form__text-field" type="password" name="password" id="password" placeholder="Ваш пароль" required>
+                </div>
+              </div>
+            </div>
+            <div class="form__controls">
+              <button class="register__btn  btn  btn--red" type="submit">Сохранить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section><!-- page--account END -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__contacts-menu">
+        <div class="container  footer__container">
+          <div class="footer__contacts">
+            <a class="logo  logo--footer" href="/">
+              <img src="img/logo-footer.png" width="220" height="68" alt="Техномарт">
+            </a>
+            <p class="footer__address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+              +7 (812) 555-05-55
+            </p>
+          </div>
+          <div class="footer__menu-wrap">
+            <ul class="footer__menu  footer__menu--top">
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Компания</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Новости</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="catalog.html">Каталог</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Доставка</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="footer__menu  footer__menu--bottom">
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Материалы</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Техника</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Инструмент</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Спецпредложения</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright-social">
+        <div class="container  footer__container">
+          <p class="footer__copyright">
+            © 2016–2017 Компания «Техномарт»
+            Все права защищены
+          </p>
+          <ul class="social-list  footer__social">
+            <a class="social-link  social-link--vk" href="#">Вконтакте</a>
+            <a class="social-link  social-link--fb" href="#">Facebook</a>
+            <a class="social-link  social-link--ig" href="#">Instagram</a>
+          </ul>
+          <p class="footer__feedback">
+            Обратная связь:
+            <a class="footer__link" href="mailto:ekaterina.zoschik@gmail.com">katteez@gmail.com</a>
+          </p>
+          <p class="footer__designed">
+            Разработано -
+            <a class="footer__link" href="https://github.com/katteez">katteez</a>
+          </p>
+        </div>
+      </div>
+    </footer><!-- footer END -->
+
+    <!-- modal--login -->
+    <div class="modal  modal--login" on-load="popup(); login();" include-html="modal-login.html"></div>
+    <!-- modal--login END-->
+
+    <div class="modal-overlay"></div>
+
+    <script src="js/service-urls.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/include-html.js"></script>
+    <script src="js/sign-in.js"></script>
+    <script src="js/header-cart.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/subnav.js"></script>
+  </body>
+</html>

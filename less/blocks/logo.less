@@ -1,0 +1,42 @@
+.logo {
+  display: inline-block;
+  width: 220px;
+  height: 42px;
+  vertical-align: middle;
+
+  &--footer {
+    display: block;
+    height: auto;
+  }
+}
+
+.logo img {
+  width: 220px;
+  height: 47px;
+}
+
+.logo--footer img {
+  width: 220px;
+  height: 68px;
+}
+
+.logo img:nth-child(2),
+.logo img:nth-child(3) {
+  display: none;
+}
+
+.logo:hover img:nth-child(1) {
+  display: none;
+}
+
+.logo:hover img:nth-child(2) {
+  display: block;
+}
+
+.logo:active img:nth-child(2) {
+  display: none;
+}
+
+.logo:active img:nth-child(3) {
+  display: block;
+}

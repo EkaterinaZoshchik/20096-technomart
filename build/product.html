@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Техномарт Страница товара</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700,400italic&subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page-wrapper">
+    <!-- page-header -->
+    <header class="page-header">
+      <div class="page-header__user">
+        <div class="container">
+          <a class="logo" href="index.html">
+            <img src="img/logo-header.png" width="220" height="47" alt="Техномарт">
+            <img src="img/logo-header_hover.png" width="220" height="47" alt="Техномарт">
+            <img src="img/logo-header_active.png" width="220" height="47" alt="Техномарт">
+          </a>
+          <form class="page-header__form" action="#" method="get">
+            <div class="page-header__search">
+              <input class="page-header__search-field" type="search" name="search" id="search-field" placeholder="Поиск:">
+            </div>
+          </form>
+          <div class="page-header__user-item">
+            <a class="page-header__user-link  page-header__user-link--bookmarks" href="#">Закладки: 0</a>
+          </div>
+          <div class="page-header__user-item">
+            <a class="page-header__user-link  page-header__user-link--cart" href="cart.html">Корзина:</a>
+          </div>
+          <div class="page-header__user-item">
+            <a class="page-header__user-link  page-header__user-link--order" href="place-order.html">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header__main">
+        <div class="container  page-header__container">
+          <div class="page-header__description  page-header__main-item">Интернет-магазин электроинструментов</div>
+          <div class="page-header__contacts  page-header__main-item">
+            <div class="page-header__phone">+7 (812) 555-05-55</div>
+            <div class="page-header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+          </div>
+          <div class="page-header__unauthorized  page-header__main-item  page-header__display-none">
+            <a class="page-header__unauthorized-link  page-header__unauthorized-link--login" href="#">Войти</a>
+            <a class="page-header__unauthorized-link  page-header__unauthorized-link--register" href="register.html">Регистрация</a>
+          </div>
+          <div class="page-header__authorized  page-header__main-item  page-header__display-none">
+            <div class="page-header__authorized-item">
+              <a class="page-header__authorized-link  page-header__authorized-link--user" href="#">Привет,</a>
+              <a class="page-header__authorized-link  page-header__authorized-link--logout" href="#" title="Выйти"></a>
+            </div>
+            <div class="page-header__authorized-item">
+              <a class="page-header__authorized-link  page-header__authorized-link--my-orders" href="orders.html">Мои заказы</a>
+              <a class="page-header__authorized-link  page-header__authorized-link--my-account" href="account.html">Личный кабинет</a>
+            </div>
+          </div>
+          <!-- main-nav -->
+          <div class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Компания</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link">Каталог</a>
+
+                <ul class="subnav">
+                  <template id="subnav-item-template">
+                    <li class="subnav__item">
+                      <a class="subnav__link"></a>
+                    </li>
+                  </template>
+                </ul>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="news.html">Новости</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Спецпредложения</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div><!-- main-nav END -->
+        </div>
+      </div>
+    </header><!-- page-header END -->
+
+    <!-- page--product -->
+    <section class="page  page--product">
+      <div class="container">
+        <!-- breadcrumbs -->
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link  breadcrumbs__link--home-icon" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link  breadcrumbs__link--group"></a>
+          </li>
+        </ul><!-- breadcrumbs END -->
+
+        <h1 class="page__title  page__title--product"></h1>
+        <div class="product">
+          <div class="product__picture-wrap">
+            <img class="product__picture" width="218" height="140">
+          </div>
+
+          <table class="product__data-table">
+            <tr>
+              <td class="product__data-name">Артикул:</td>
+              <td class="product__data-value  product__data-value--id"></td>
+            </tr>
+            <tr>
+              <td class="product__data-name">Производитель:</td>
+              <td class="product__data-value  product__data-value--brand"></td>
+            </tr>
+            <tr>
+              <td class="product__data-name">Мощность, Вт:</td>
+              <td class="product__data-value  product__data-value--capacity"></td>
+            </tr>
+            <tr>
+              <td class="product__data-name">Вес, кг:</td>
+              <td class="product__data-value  product__data-value--weight"></td>
+            </tr>
+            <tr>
+              <td class="product__data-name">Питание:</td>
+              <td class="product__data-value  product__data-value--power-supply"></td>
+            </tr>
+
+            <template id="product-data-template">
+              <tr>
+                <td class="product__data-name"></td>
+                <td class="product__data-value"></td>
+              </tr>
+            </template>
+          </table>
+
+          <div class="product_buy-block">
+            <p class="product__price-wrap  product__price-wrap--old">Старая цена: <span class="product__old-price"></span></p>
+            <p class="product__price-wrap">Цена: <span class="product__price"></span></p>
+            <a class="btn  btn--buy" href="#">Купить</a>
+            <a class="btn  btn--bookmark" href="#">В закладки</a>
+          </div>
+        </div><!-- product END -->
+      </div>
+    </section><!-- page--product END -->
+
+    <!-- about-perforators -->
+    <section class="about-perforators">
+      <div class="container">
+        <h2 class="about-perforators__title">Пара слов о товаре</h2>
+        <p class="about-perforators__desc"></p>
+      </div>
+    </section><!-- about-perforators END -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__contacts-menu">
+        <div class="container  footer__container">
+          <div class="footer__contacts">
+            <a class="logo  logo--footer" href="/">
+              <img src="img/logo-footer.png" width="220" height="68" alt="Техномарт">
+            </a>
+            <p class="footer__address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+              +7 (812) 555-05-55
+            </p>
+          </div>
+          <div class="footer__menu-wrap">
+            <ul class="footer__menu  footer__menu--top">
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Компания</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Новости</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="catalog.html">Каталог</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Доставка</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--top">
+                <a class="footer__menu-link  footer__menu-link--top" href="#">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="footer__menu  footer__menu--bottom">
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Материалы</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Техника</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Инструмент</a>
+              </li>
+              <li class="footer__menu-item  footer__menu-item--bottom">
+                <a class="footer__menu-link  footer__menu-link--bottom" href="#">Спецпредложения</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright-social">
+        <div class="container  footer__container">
+          <p class="footer__copyright">
+            © 2016–2017 Компания «Техномарт»
+            Все права защищены
+          </p>
+          <ul class="social-list  footer__social">
+            <a class="social-link  social-link--vk" href="#">Вконтакте</a>
+            <a class="social-link  social-link--fb" href="#">Facebook</a>
+            <a class="social-link  social-link--ig" href="#">Instagram</a>
+          </ul>
+          <p class="footer__feedback">
+            Обратная связь:
+            <a class="footer__link" href="mailto:ekaterina.zoschik@gmail.com">katteez@gmail.com</a>
+          </p>
+          <p class="footer__designed">
+            Разработано -
+            <a class="footer__link" href="https://github.com/katteez">katteez</a>
+          </p>
+        </div>
+      </div>
+    </footer><!-- footer END -->
+
+    <!-- modal--cart -->
+    <div class="modal  modal--cart">
+      <button class="modal__close" type="button" title="Закрыть">
+        Закрыть
+      </button>
+      <div class="modal__container  modal__container--top">
+        <span class="modal__text">Товар добавлен в корзину!</span>
+      </div>
+      <div class="modal__container  modal__container--bottom">
+        <a class="btn btn--red" href="cart.html">Оформить заказ</a>
+        <button class="modal__btn  modal__continue-shopping  btn btn--white" type="button">Продолжить покупки</button>
+      </div>
+    </div><!-- modal--cart END-->
+
+    <!-- modal--login -->
+    <div class="modal  modal--login" on-load="popup(); login();" include-html="modal-login.html"></div>
+    <!-- modal--login END-->
+
+    <div class="modal-overlay"></div>
+
+    <script src="js/service-urls.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/get-json-from-url.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/include-html.js"></script>
+    <script src="js/sign-in.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/add-to-cart.js"></script>
+    <script src="js/header-cart.js"></script>
+    <script src="js/subnav.js"></script>
+  </body>
+</html>

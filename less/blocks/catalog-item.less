@@ -1,0 +1,130 @@
+.catalog-item {
+  position: relative;
+  display: inline-block;
+  width: 218px;
+  min-height: 316px;
+  margin-right: 20px;
+  border: 1px solid #e5e5e5;
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 18px;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  &--new::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    right: -43px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-bottom: 27px solid #ee3643;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-top: 27px solid transparent;
+    transform: rotate(45deg);
+  }
+
+  &--new::after {
+    content: "new";
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    transform: rotate(45deg);
+    font-size: 15px;
+    font-family: "Cuprum", "Arial", "sans-serif";
+    color: #ffffff;
+  }
+
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 9px 30px 2px #a9adb5;
+  }
+}
+.catalog-page .catalog-item {
+  margin-bottom: 20px;
+}
+
+.catalog-page .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.popular-goods .catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-item__buy-block {
+  display: none;
+  min-height: 136px;
+  padding-top: 43px;
+  padding-left: 41px;
+}
+
+.catalog-item:hover .catalog-item__buy-block {
+  display: block;
+}
+
+.catalog-item__picture {
+  margin-bottom: 36px;
+}
+
+.catalog-item:hover .catalog-item__picture{
+  display: none;
+}
+
+.catalog-item__desc,
+.catalog-item__old-price {
+  display: block;
+  width: 160px;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.catalog-item__desc:hover {
+  text-decoration: underline;
+}
+
+.catalog-item__desc:active {
+  color: fade(#000000, 60%);
+  text-decoration: none;
+}
+
+.catalog-item__old-price {
+  min-height: 17px;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.catalog-item__price {
+  position: relative;
+  display: inline-block;
+  margin-left: 42px;
+  padding-left: 34px;
+  padding-right: 37px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", "sans-serif";
+  vertical-align: middle;
+  border-radius: 3px;
+
+  &::after {
+    .pseudo();
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 19px solid transparent;
+    border-top: 19px solid #ffffff;
+    border-bottom: 19px solid #ffffff;
+  }
+}

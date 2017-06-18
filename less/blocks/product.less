@@ -1,0 +1,35 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__picture {
+  border: 1px solid #e5e5e5;
+}
+
+.product__data-table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.product__data-name,
+.product__data-value {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.product__data-value {
+  padding-left: 30px;
+}
+
+.product__price-wrap {
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+
+  &--old {
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-decoration: line-through;
+  }
+}

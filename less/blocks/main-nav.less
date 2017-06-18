@@ -1,0 +1,39 @@
+.main-nav {
+  margin-top: 23px;
+}
+
+.main-nav__list {
+  .ul-reset();
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.main-nav__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav__link {
+  display: block;
+  min-height: 43px;
+  padding-top: 17px;
+  padding-left: 33px;
+  padding-right: 33px;
+  font-size: 17px;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:last-child {
+    padding-right: 34px;
+  }
+}
+
+.main-nav__link[href]:hover {
+  background-color: #293449;
+}
+
+.main-nav__link[href]:active {
+  background-color: #1d2739;
+  color: #a8abaf;
+}

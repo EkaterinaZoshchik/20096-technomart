@@ -1,0 +1,129 @@
+.catalog-page__title {
+  .page-title();
+}
+
+.catalog-page__results {
+  .clearfix();
+}
+
+.catalog-page__catalog {
+  float: right;
+  width: 700px;
+}
+
+.catalog-page__sorting {
+  width: auto;
+  margin-bottom: 16px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+  padding-right: 16px;
+  line-height: 18px;
+  background-color: #f7f3ec;
+}
+
+.catalog-page__sorting-title {
+  margin-right: 136px;
+  text-transform: uppercase;
+}
+
+.catalog-page__sorting-list {
+  .ul-reset();
+  display: inline-block;
+  vertical-align: top;
+}
+
+.catalog-page__sorting-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  &:nth-child(1) {
+    margin-right: 68px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 61px;
+  }
+}
+
+.catalog-page__sorting-link {
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.3;
+  text-decoration: none;
+  border-bottom: 1px dotted #ee3643;
+
+  &:hover {
+    opacity: 1;
+    border-bottom: 1px solid #ee3643;
+  }
+
+  &:active {
+    color: #ee3643;
+    border: 0;
+  }
+
+  &--selected {
+    color: #ee3643;
+    opacity: 1;
+    border: 0;
+  }
+
+  &--selected:hover {
+    border: 0;
+  }
+}
+
+.catalog-page__sorting-order {
+  font-size: 0;
+  opacity: 1;
+
+  &::after {
+    .pseudo();
+    top: 4px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  &--asc::after {
+    left: 44px;
+    border-bottom: 10px solid #c6c2bd;
+  }
+
+  &--asc&--selected::after {
+    border-bottom: 10px solid #ee3643;
+  }
+
+  &--desc::after {
+    left: 73px;
+    border-top: 10px solid #c6c2bd;
+  }
+
+  &--desc&--selected::after {
+    border-top: 10px solid #ee3643;
+  }
+
+  &--asc:hover::after {
+    border-bottom: 10px solid #000000;
+  }
+
+  &--desc:hover::after {
+    border-top: 10px solid #000000;
+  }
+
+  &--asc:active::after {
+    border-bottom: 10px solid #ee3643;
+  }
+
+  &--desc:active::after {
+    border-top: 10px solid #ee3643;
+  }
+}
+
+.catalog-page__items-wrap {
+  font-size: 0;
+  margin-bottom: 60px;
+}

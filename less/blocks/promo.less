@@ -1,0 +1,218 @@
+.promo {
+  margin-top: 59px;
+}
+
+.promo__top-block {
+  .clearfix();
+}
+
+.promo__card {
+  width: 185px;
+  height: 123px;
+  margin-bottom: 20px;
+  padding-right: 115px;
+  overflow: hidden;
+
+  &--material {
+    background: #f6b22d url("../img/material_promo.png") no-repeat 213px 31px;
+  }
+
+  &--instrument {
+    background: #4aafde url("../img/instrument_promo.png") no-repeat 197px 33px;
+  }
+
+  &--equipment {
+    background: #cc79d1 url("../img/equipment_promo.png") no-repeat 191px 31px;
+  }
+
+  &--discount {
+    background: #85d179 url("../img/discount_promo.png") no-repeat 196px 26px;
+  }
+
+  &--delivery {
+    background: #f6b22d url("../img/delivery_promo.png") no-repeat 191px 32px;
+  }
+
+  &--top {
+    float: left;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--bottom {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.promo__card-name {
+  margin-top: 21px;
+  margin-left: 23px;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.promo__card-link {
+  margin-top: 13px;
+  margin-left: 23px;
+  background-color: rgba(0,0,0,0.1);
+
+  &:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  &:active {
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+/********** Промо-слайдер **********/
+.promo__slider {
+  position: relative;
+  float: left;
+  width: 620px;
+  height: 266px;
+  margin-right: 20px;
+}
+
+.promo__slider input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.promo__slider-controls-wrap {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  width: 100px;
+  height: 10px;
+  margin-left: -50px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.promo__slider-control {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  vertical-align: top;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+#promo-slide-1:checked ~ .promo__slider-controls-wrap .promo__slider-control--1,
+#promo-slide-2:checked ~ .promo__slider-controls-wrap .promo__slider-control--2 {
+  background-color: #ee3643;
+}
+
+.promo__slider-toggle {
+  position: absolute;
+  top: 114px;
+  width: 22px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+
+  &--prev {
+    left: 25px;
+  }
+
+  &--next {
+    right: 20px;
+  }
+
+  &::before,
+  &::after {
+    .pseudo();
+    left: 10px;
+    width: 3px;
+    height: 28px;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+
+  &::before {
+    top: -3px;
+  }
+
+  &::after {
+    top: 15px;
+  }
+
+  &--prev::before,
+  &--next::after {
+    transform: rotate(45deg);
+  }
+
+  &--prev::after,
+  &--next::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.promo__slide {
+  position: relative;
+  width: 620px;
+  height: 266px;
+  overflow: hidden;
+}
+
+.promo__slide-title,
+.promo__slide-desc {
+  padding-left: 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", "sans-serif";
+  color: #ffffff;
+}
+
+.promo__slide-title {
+  padding-top: 26px;
+  margin-bottom: 4px;
+  font-size: 36px;
+  line-height: 30px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.promo__slide-link {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+  width: 195px;
+}
+
+.promo__slide:nth-child(1) {
+  background: #84776f url("../img/perforators_slider.jpg") no-repeat;
+}
+
+.promo__slide:nth-child(2) {
+  background: #84776f url("../img/drills_slider.jpg") no-repeat;
+}
+
+.promo__slide {
+  display: none;
+}
+
+#promo-slide-1:checked ~ .promo__slides-wrap .promo__slide:nth-child(1) {
+  display: block;
+}
+
+#promo-slide-2:checked ~ .promo__slides-wrap .promo__slide:nth-child(2) {
+  display: block;
+}

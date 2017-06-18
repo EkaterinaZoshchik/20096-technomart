@@ -1,0 +1,66 @@
+.popular-brands {
+  margin-top: 21px;
+}
+
+.popular-brands__title-wrap {
+  .clearfix();
+  min-height: 64px;
+  margin-bottom: 20px;
+  padding-top: 25px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #f7f3ec;
+}
+
+.popular-brands__title {
+  .block-title();
+  float: left;
+  padding-top: 5px;
+  line-height: 30px;
+  color: #32425c;
+  font-weight: normal;
+}
+
+.popular-brands__link {
+  float: right;
+  width: 253px;
+}
+
+.popular-brands__brands-wrap {
+  .clearfix();
+}
+
+.popular-brands__brand-link {
+  float: left;
+  width: 218px;
+  height: 143px;
+  margin-right: 20px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n+5) {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 9px 30px 2px #a9adb5;
+  }
+
+  &:active {
+    border: 1px solid #ffffff;
+    box-shadow: 0 3px 10px 1px #a9adb5;
+  }
+}
+
+.popular-brands__brand-picture {
+  margin-top: 30px;
+}
+
+.popular-brands__brand-link:active .popular-brands__brand-picture {
+  opacity: 0.3;
+}

@@ -1,0 +1,71 @@
+.page-wrapper {
+  min-width: 960px;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: normal;
+  font-family: "PT Sans", "Arial", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not([href]){
+  cursor: default;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="text"],
+textarea {
+  outline: none;
+  resize: none;
+}
+
+p {
+  margin: 0;
+}
+
+/***** Анимация "Прыжок слева" для окна "Напишите нам" *****/
+@keyframes bounce {
+  from {
+    transform: translateX(-2000px);
+  }
+  70% {
+    transform: translateX(20px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*** Анимация "Тряска" для окна "Напишите нам" ***/
+@keyframes shake {
+  from, to {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+/*** Анимация "Масштаб" ***/
+@keyframes scale {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}

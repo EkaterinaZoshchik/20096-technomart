@@ -1,0 +1,294 @@
+/********** Общие стили для модальных окон **********/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 620px;
+  margin-left: -310px;
+  box-shadow: 0 25px 60px 0 rgba(18, 25, 35, 0.7);
+  border-top: 7px solid #ee3643;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  line-height: 18px;
+  z-index: 1000;
+}
+
+.modal__close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  outline: 0;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1001;
+
+  &::before,
+  &::after {
+    .pseudo();
+    top: 8px;
+    left: 0;
+    width: 23px;
+    height: 5px;
+    background-color: #ee3643;
+    border-radius: 1px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__container {
+  width: 460px;
+  padding: 37px 80px;
+
+  &--top {
+    background-color: #ffffff;
+  }
+
+  &--bottom {
+    .clearfix();
+    background-color: #f1f1f1;
+  }
+}
+
+.modal__btn {
+  border: 0;
+  box-sizing: content-box;
+}
+
+.modal .btn {
+  font-size: 14px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+}
+
+.modal__extra-text {
+  display: block;
+  width: 70%;
+  margin-top: 50px;
+  padding-left: 99px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/********** Модальное окно "Авторизация" **********/
+.modal--login.show{
+  display: block;
+  animation: scale 0.2s;
+}
+
+.modal--login.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal--login {
+  margin-top: -85px;
+}
+
+.modal--login .modal__container--top {
+  display: flex;
+}
+
+.modal--login .modal__email-block {
+  width: 45%;
+  margin-right: 10%;
+}
+
+.modal--login .modal__password-block {
+  width: 45%;
+}
+
+.modal--login .modal__container--bottom {
+  display: flex;
+}
+
+.modal--login .modal__btn {
+  width: 45%;
+  min-height: 38px;
+  margin-right: 10%;
+  padding: 0;
+}
+
+.modal--login .btn {
+  width: 45%;
+}
+
+/********** Модальное окно "Напишите нам" **********/
+.modal--write-us.show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal--write-us.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal--write-us {
+  margin-top: -215px;
+}
+
+.modal--write-us .modal__name-block,
+.modal--write-us .modal__email-block {
+  width: 220px;
+  min-height: 64px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
+
+.modal--write-us .modal__name-block {
+  float: left;
+}
+
+.modal--write-us .modal__email-block {
+  float: right;
+}
+
+.modal--write-us .modal__text-block {
+  clear: both;
+}
+
+.modal--write-us .modal__btn {
+  width: 100%;
+  min-height: 38px;
+  padding: 0;
+}
+
+/******* Модальное окно "Добавление товара в корзину" *******/
+.modal--cart.show {
+  display: block;
+  animation: scale 0.1s;
+}
+
+.modal--cart {
+  margin-top: -141px;
+}
+
+.modal--cart .modal__container--top {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.modal--place-order .modal__container--top {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.modal--cart .modal__container--top::before,
+.modal--place-order .modal__container--top::before {
+  .pseudo();
+  top: 45px;
+  left: 80px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: #63a63e;
+}
+
+.modal--cart .modal__text,
+.modal--place-order .modal__text {
+  position: relative;
+  display: block;
+  padding-left: 99px;
+  font-size: 30px;
+  line-height: 32px;
+
+  &::before {
+    .pseudo();
+    top: 10px;
+    left: 16px;
+    width: 20px;
+    height: 7px;
+    background-color: #ffffff;
+    border-radius: 1px;
+    border-top-right-radius: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    .pseudo();
+    top: 6px;
+    left: 24px;
+    width: 32px;
+    height: 7px;
+    background-color: #ffffff;
+    border-bottom-right-radius: 1px;
+    border-top-right-radius: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+.modal--cart .btn {
+  width: 220px;
+  border: 0;
+  box-sizing: content-box;
+}
+
+.modal--cart .btn--red {
+  float: left;
+}
+
+.modal--cart .btn--white {
+  float: right;
+  min-height: 39px;
+  padding: 0
+}
+
+/**********Модальное окно "Карта" **********/
+.modal--map.show {
+  display: block;
+  animation: scale 0.4s;
+}
+
+.modal--map {
+  width: 940px;
+  height: 446px;
+  margin-top: -224px;
+  margin-left: -470px;
+  border: 7px solid #ffffff;;
+}
+
+.modal--map .modal__close {
+  right: -40px;
+}
+
+/******* Модальное окно "Размещение заказа" *******/
+.modal--place-order.show {
+  display: block;
+  animation: scale 0.1s;
+}
+
+.modal--place-order {
+  margin-top: -180px;
+}
+
+/******* Модальное окно "Размещение заказа не удалось" *******/
+.modal--failed.show {
+  display: block;
+  animation: scale 0.1s;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.modal--failed .modal__text {
+  font-size: 30px;
+  line-height: 32px;
+}
+.modal--failed .modal__extra-text {
+  width: auto;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.modal--failed .modal__email {
+  margin-top: 15px;
+}
